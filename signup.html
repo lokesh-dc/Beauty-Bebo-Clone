@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./Styles/signup.css">
-    <title>Create New Customer Account</title>
+    <link rel="stylesheet" href="./Styles/Navbar.css">
+    <link rel = "icon" href = "https://i.pinimg.com/280x280_RS/7d/8b/d5/7d8bd5f68f1e0da49fade19444fb734d.jpg" type = "image/x-icon"><title>Create New Customer Account</title>
   </head>
   <body>
     <div id="navbar"></div>
@@ -17,31 +18,42 @@
             <p>Sign up with facebook</p>
         </button>
         <button class="logo google">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZ8YMB8LXep-AjCFRHGd1CIuhTcfpRQihPRA&usqp=CAU" alt="">
-            <p>Sign up with Google</p>
+        <img src="https://skipway.com/wp-content/uploads/2020/05/image-20150902-6700-t2axrz.jpg" alt="">      
+        <p>Sign up with Google</p>
         </button>
     </div>
     
-    <p>--or--</p>
+    <p>--OR--</p>
     <div id="box2">
         <h2 class="head">PERSONAL INFORMATION</h2>
-        <label for="" class="space">First Name *</label>
-        <label for="" class="space shift">Last Name *</label><br>
-        <input type="text" id="fname" class="space">
-        <input type="text" name="" id="lname" class="space shift2"><br>
-        <input type="checkbox" name="" id="">
-        <label for="" class="shiftup">Sign up for Newsletter</label><br>
-        <label for="">Email *</label><br>
-        <input type="text" name="" id="email" class="width"><br>
-        <label for="">Phone *</label><br>
-        <input type="text" class="width" id="mobile"><br>
-        <label for="">Password *</label><br>
-        <input type="text" name="password" id="password" class="width"><br>
-        <label for="">Confirm Password *</label><br>
-        <input type="text" name="" id="" class="width"><br>
-        <button id="but" onclick="submit()">CREATE AN ACCOUNT</button>
+        <div id="box3">
+          <div >
+            <label>First Name <span class="span">*</span></label><br>
+            <input type="text" id="fname">
+          </div>
+          <div>
+            <label>Last Name <span class="span">*</span></label><br>
+            <input type="text" id="lname">
+          </div>
+        </div>
+        
+        
+        <div id="check">
+          <input type="checkbox">
+          <label>Sign up for Newsletter</label><br>
+        </div>
+        
+        <label for="">Email <span class="span"> *</span></label><br>
+        <input type="email" name="" id="email" class="width"><br>
+        <label for="">Phone <span class="span">*</span></label><br>
+        <input type="number" class="width" id="mobile"><br>
+        <label for="">Password <span  class="span">*</span></label><br>
+        <input type="password" name="password" id="password" class="width"><br>
+        <label for="">Confirm Password <span class="span">*</span></label><br>
+        <input type="password" name="" id="" class="width"><br>
+        <button id="but">CREATE AN ACCOUNT</button>
     </div>
    </div>
   </body>
 </html>
-<script src="./Scripts/signup.js"></script>
+<script src="./Scripts/signup.js" type="module"></script>

@@ -1,0 +1,98 @@
+*{
+    box-sizing: border-box;
+}
+
+
+#main{
+    width: 40%;
+    margin: auto;
+    display: grid;
+    
+}
+
+
+#box2{
+    border: 1px solid;
+    padding: 40px;
+    font-size: 15px;
+    background-color: rgb(250,250,250);
+}
+.width{
+    width: 100%;
+}
+#box2 > input{
+    height: 35px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+#but{
+    background-color: rgb(68,68,68);
+    color: white;
+    padding: 8px;
+}
+
+
+
+.logo > img{
+    width:20%;
+    height: 105%;
+    margin-top: .4px;
+    margin-right: 4px;
+    border-right: 1px solid black;
+    /* padding-right: 11px; */
+    /* background-color: green; */
+    margin-left: -10px;
+    
+}
+#main > h2,p{
+    text-align: center;
+}
+
+.logo{
+    width: 200px;
+    height: 35px;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    align-items: center;
+    border: none;
+    border-radius: 5px;
+}
+#logoDiv{
+    display: flex;
+    /* border: 1px solid; */
+    justify-content: center;
+    gap: 10px;
+}
+.google{
+    background-color: rgb(221,75,57);
+
+}
+.google > img{
+    background-color: white;
+}
+.facebook{
+    background-color: rgb(56,86,159);
+}
+.head{
+    /* text-align: center; */
+    border-bottom: 1px solid;
+    font-size: 20px;
+    padding-bottom: 15px;
+}
+.space{
+    /* margin-left: 35%; */
+    /* border: 1px solid; */
+    width: 48%;
+}
+.shift{
+    margin-left: 32%;
+}
+.shift2{
+    margin-left: 2px;
+}
+
+.shiftup{
+    margin-top: 110px;
+    border: 1px solid;
+}

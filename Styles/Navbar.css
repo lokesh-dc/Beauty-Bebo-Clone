@@ -1,0 +1,106 @@
+
+/* importing fonts  */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;900&display=swap');
+
+*{
+    margin:0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+}
+:root{
+    --pink : #dd0285;
+}
+#navbar{
+    position: sticky;
+    top:-20%;
+}
+#navbar>div{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+#advertisement-div{
+    position: relative;
+}
+#advertisement-div>img:first-child{
+    width: 100%;
+}
+
+#advertisement-div>img:last-child{
+    position: absolute;
+    right:5%;
+    bottom: 15%;
+    width: 9%;
+}
+
+/* Search & Logo section in  navbar  */
+#search-section{
+    padding: 10px 10%;
+}
+#search-section>div:nth-child(2){
+    display: grid;
+    grid-template-columns: 4fr 5fr 1fr;
+    height:50px;
+    width: 500px;
+    flex-wrap: wrap;   
+}
+input,select{
+    border: 1px solid rgba(128, 128, 128, 0.267);
+    padding:  0 10px ;
+    color: grey
+}
+select>option{
+    text-transform: capitalize;
+}
+#search-section>div>button{
+    border: none;
+    background-color: var(--pink) ;
+    padding: 5%;
+
+}
+#search-section>div img{
+    width: 20px;
+    height: 20px ;
+}
+#search-section>div:nth-child(3){
+    display: flex;
+    gap:20px;
+    align-items: center;
+}
+#wishlist{
+    border: 1px solid black;
+    padding: 10px;
+}
+#account,
+#categories-div>div{
+    display: flex;
+    align-items: center;
+    gap:5px;
+}
+#account>img{
+    border: 1px solid rgba(0, 0, 0, 0.13);
+    padding: 10px;
+
+}
+
+/* Categories section in  navbar  */
+
+
+#categories-div{
+    background-color: var(--pink);
+    height: 60px;
+    padding: 0 8%;
+    text-transform: uppercase;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 100;
+}
+
+#categories-div>div{
+    background-color: #a00361;
+    padding: 12px 20px;
+}
+

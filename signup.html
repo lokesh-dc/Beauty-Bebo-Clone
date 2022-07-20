@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./Styles/signup.css">
+    <title>Create New Customer Account</title>
+  </head>
+  <body>
+    <div id="navbar"></div>
+   <div id="main">
+    <h2>CREATE NEW CUSTOMER ACCOUNT</h2>
+    <div id="logoDiv">
+        <button class="logo facebook">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Facebook_logo_%28square%29.png/640px-Facebook_logo_%28square%29.png" alt="">
+            <p>Sign up with facebook</p>
+        </button>
+        <button class="logo google">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZ8YMB8LXep-AjCFRHGd1CIuhTcfpRQihPRA&usqp=CAU" alt="">
+            <p>Sign up with Google</p>
+        </button>
+    </div>
+    
+    <p>--or--</p>
+    <div id="box2">
+        <h2 class="head">PERSONAL INFORMATION</h2>
+        <label for="" class="space">First Name *</label>
+        <label for="" class="space shift">Last Name *</label><br>
+        <input type="text" id="fname" class="space">
+        <input type="text" name="" id="lname" class="space shift2"><br>
+        <input type="checkbox" name="" id="">
+        <label for="" class="shiftup">Sign up for Newsletter</label><br>
+        <label for="">Email *</label><br>
+        <input type="text" name="" id="email" class="width"><br>
+        <label for="">Phone *</label><br>
+        <input type="text" class="width" id="mobile"><br>
+        <label for="">Password *</label><br>
+        <input type="text" name="password" id="password" class="width"><br>
+        <label for="">Confirm Password *</label><br>
+        <input type="text" name="" id="" class="width"><br>
+        <button id="but" onclick="submit()">CREATE AN ACCOUNT</button>
+    </div>
+   </div>
+  </body>
+</html>
+<script src="./Scripts/signup.js"></script>

@@ -1,0 +1,44 @@
+#container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    width: 72%;
+    height: auto;
+}
+
+#container>div {
+
+    text-align: center;
+    padding: 10px 10px;
+    /* border: 1px solid black; */
+    font-family: Roboto;
+
+}
+
+#container>div>img+p {
+    font-family: Roboto;
+}
+
+#main {
+    width: 90%;
+    height: auto;
+    margin: auto;
+    border: 1px solid;
+    display: flex;
+}
+
+#sidebar {
+    width: 28%;
+    height: 500px;
+    border: 1px solid;
+}
+
+button {
+    background-color: #dd0285;
+    border: 0px;
+    padding: 5px 10px;
+    border-radius: 2px;
+    color: white;
+    margin-right: 5px;
+    cursor: pointer;
+}

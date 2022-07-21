@@ -12,11 +12,12 @@
     border: 1px solid;
     width: 50%;
     padding: 20px;
+    background-color: #ffffff;
 }
 #mainLogin{
     width: 80%;
     margin: auto;
-    margin-top: 300px;
+    margin-top: 20px;
 }
 #mainLogin > h2{
     margin-bottom: 30px;
@@ -68,13 +69,21 @@
     background-color: rgb(56,86,159);
     /* margin-left: 20px; */
 }
+.facebook:hover{
+    background-color: #2d4373;
+}
 span{
     color: #c23321;
 }
 .google{
-    background-color: #c23321;
+    background-color: #dd4b39;
+
     /* border: 1px #c23321; */
     
+
+}
+.google:hover{
+    background-color: #c23321;
 
 }
 #loginLogo{
@@ -109,7 +118,7 @@ span{
     margin-top: 10px;
     margin-bottom: 20px;
 }
-.btn{
+.btn12{
     text-align: center;
     padding: 8px 20px;
     font-size: 14px;
@@ -118,6 +127,16 @@ span{
     border: none;
     margin-bottom: 5px;
 }
+.btn12:hover{
+    background-color: #dd0285;
+}
+#login > input{
+    color: #666666;
+    border: 1px solid #adadad;
+}
 #login > label{
     color: #666666;
+}
+#footer{
+    margin-top: 50px;
 }

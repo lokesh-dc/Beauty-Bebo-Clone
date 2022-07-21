@@ -1,4 +1,3 @@
-
 /* importing fonts  */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;900&display=swap');
 
@@ -47,15 +46,15 @@
     display: grid;
     grid-template-columns: 4fr 5fr 1fr;
     height:50px;
-    width: 500px;
+    width: 800px;
     flex-wrap: wrap;   
 }
 input,select{
-    border: 1px solid rgba(128, 128, 128, 0.267);
+    border: 1px solid rgba(128, 128, 128, 0.075);
     padding:  0 10px ;
     color: grey
 }
-select>option{
+select{
     text-transform: capitalize;
 }
 #search-section>div>button{
@@ -90,8 +89,6 @@ select>option{
 }
 
 /* Categories section in  navbar  */
-
-
 #categories-div{
     background-color: var(--pink);
     height: 60px;
@@ -103,7 +100,118 @@ select>option{
 }
 
 #categories-div>div{
+    gap:10px;
     background-color: #a00361;
     padding: 12px 20px;
+    height: 100%;
 }
 
+
+
+/* POPUP STYLING */
+
+#cart-popup{
+    width: 18%;;
+    height: 330px;
+    /* border: 1px solid green; */
+    visibility: hidden;
+    position: absolute;
+    right:85px;
+    display: flex;
+    flex-direction: column;
+     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+     background-color: white;
+   }
+   
+   #product
+   {
+       width: 90%;;
+       height: 25%;
+       /* border: 4px solid red; */
+       margin: auto;
+       display: flex;
+       gap: 5px;
+   }
+   #pic
+   {
+       width: 28%;
+       /* border: 1px solid; */
+       height: 90%;
+       box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+   }
+   
+   #price
+   {
+       width: 70%;
+       /* border: 1px solid; */
+       height: 90%;
+       margin: auto;
+       display:grid;
+       
+      
+       
+   }
+   
+   #price div{
+   width: 90%;
+   height: 95%;
+   /* border: 1px solid; */
+   margin: auto;
+   }
+   
+   #image
+   {
+      height: 70px;
+      width: 60px;
+      margin: auto;
+   }
+   #total
+   {width: 90%;;
+       height: 25%;
+       /* border: 4px solid red; */
+       margin: auto;
+       box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+       
+   }
+   
+   #total > div{
+       width: 90%;
+       height: 50%;
+       /* border: 1px solid red; */
+       margin: auto;
+       display: flex;
+       justify-content: space-between;
+   }
+   #total>:last-child{
+    display: flex;
+    gap: 10%;
+   }
+   .btn
+   {
+     border-radius: 20px;
+     width: 96%;
+     height: 70%;
+     margin: auto;
+     background-color:#dd0285;
+     color: white;
+     border: 0px;
+   }
+   
+   #pric{
+   color: #dd0285;
+   }
+   #Subtotal{
+       font-weight: bold;
+   }
+   
+   #box
+   {
+    width: 40px;
+    height: 40px;  
+    outline: none; 
+   }
+   
+   #price>div:hover{
+       color: #dd0285;
+   }
+   

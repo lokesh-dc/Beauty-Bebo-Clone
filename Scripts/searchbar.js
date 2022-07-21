@@ -6,15 +6,10 @@ let search = async () => {
 
 let getData = async (query) => {
     let url = `https://makeup-api.herokuapp.com/api/v1/products.json?brand=covergirl&product_type=${query}`
-
     let res = await fetch(url);
     let data = await res.json()
     append(data)
     console.log(data);
-
-
-
-
 }
 
 

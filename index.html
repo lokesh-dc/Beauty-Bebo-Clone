@@ -6,12 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beuty Bebo</title>
     <link rel="stylesheet" href="./Styles/Navbar.css">
+    <link rel="stylesheet" href="./Styles/index.css">
     <link rel="stylesheet" href="./Styles/footer.css">
-    <style>
-        #container{
-            font-size: 100px;
-        }
-    </style>
 </head>
 <body>
 
@@ -20,6 +16,34 @@
     </div>
 
     <div id="container">
+        <div id="top-section">
+            <div>
+                <h2> <img src="./Images/categories.png" alt=""> all categories</h2>
+                <ul>
+                    <li> <img src="./Images/icons/makeup-small.png" alt="">makeup</li>
+                    <li><img src="./Images/icons/skin-small.png" alt="">skin</li>
+                    <li><img src="./Images/icons/hair-small.png" alt="">hair</li>
+                    <li><img src="./Images/icons/personal-care-small.png" alt="">personal care</li>
+                    <li><img src="./Images/icons/mom-baby-care-small.png" alt="">mom  & baby care</li>
+                    <li><img src="./Images/icons/fragrance.png" alt="">fragrance</li>
+                    <li><img src="./Images/icons/ayurveda.png" alt="">ayurveda</li>
+                </ul>
+            </div>
+            <div>
+                <!-- Top section banner div -->
+                <img id="slider" src="./Images/top-slider/slider-1.jpg" alt="">
+            </div>
+        </div>
+
+        <div>
+            <img src="https://www.beautybebo.com/pub/media/blue_heaven.jpg" alt="">
+        </div>
+        <div>
+            <p>NEW ARRIVALS</p>
+            <div id="arrivals">
+                <!-- appending products through javascript using fetch & import / export  -->
+            </div>
+        </div>
     </div>
 
     <div id="footer">
@@ -38,6 +62,27 @@
     document.getElementById("magic").addEventListener("click",() =>{
     document.getElementById("cart-popup").style.visibility="visible";
     });
+
+
+    let count = 0;
+
+    let slider = () => {
+        let images = ["./Images/top-slider/slider-1.jpg","./Images/top-slider/slider-2.jpg","./Images/top-slider/slider-3.jpg"]
+        if(count===images.length)
+            count = 0;
+
+        let source = images[count];
+
+        document.getElementById('slider').src = source;
+        count++;
+    }
+    setInterval(slider,2000);
+
+
+    import getdata from "./components/fetch.js"
+    window.addEventListener("load",()=>{
+        getdata("foundation","arrivals",4);
+    })
 
     import footer from "./components/footer.js"
     document.getElementById("footer").innerHTML = footer();

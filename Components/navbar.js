@@ -1,5 +1,5 @@
 let navbar = () => {
-  return `        <div id="advertisement-div">
+  return ` <div id="advertisement-div">
             <img src="./Images/homepage_ad.jpg" alt="advertisement.jpeg">
             <img src="./Images/playButton.png" alt="">
         </div>

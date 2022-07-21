@@ -18,6 +18,7 @@
 
     <div id="navbar">
         <!-- appending navbar from components using import & export  -->
+
     </div>
 
     <div id="container">
@@ -44,16 +45,11 @@
 
     document.getElementById("navbar").innerHTML = navbar();
 
-    
-
-
 document.getElementById("magic").addEventListener("click",() =>{
 document.getElementById("cart-popup").style.visibility="visible";
 });
 
-    import navbar from "./components/navbar.js"
     import footer from "./components/footer.js"
-    document.getElementById("navbar").innerHTML = navbar();
     document.getElementById("footer").innerHTML = footer();
 </script>
 

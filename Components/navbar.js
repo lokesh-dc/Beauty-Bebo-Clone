@@ -26,7 +26,7 @@ let navbar = () => {
             <button><img src="./Images/search.svg" alt="" id="search"></button>
         </div>
         <div>
-            <img src="https://img.icons8.com/ios-glyphs/344/like--v1.png" id="wishlist" alt="Wishlist">
+            <img src="./Images/wishlist-icon.png" id="wishlist" alt="Wishlist">
             <div id="account">
                 <img src="https://img.icons8.com/ios-glyphs/344/user--v1.png" id alt="">
                 <p>My Account</p>

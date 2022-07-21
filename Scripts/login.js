@@ -32,3 +32,10 @@ async function login(){
 document.getElementById("create").addEventListener("click",function(){
     window.location.href = "./signup.html"
 })
+
+
+
+
+document.getElementById("logoDiv").addEventListener("click",function(){
+    alert("Option not available Login Manually")
+})

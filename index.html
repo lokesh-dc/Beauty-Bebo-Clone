@@ -44,9 +44,6 @@
 
     document.getElementById("navbar").innerHTML = navbar();
 
-    
-
-
 document.getElementById("magic").addEventListener("click",() =>{
 document.getElementById("cart-popup").style.visibility="visible";
 });
@@ -55,5 +52,10 @@ document.getElementById("cart-popup").style.visibility="visible";
     import footer from "./components/footer.js"
  
     document.getElementById("footer").innerHTML = footer();
+
+    document.getElementById("btn-1").addEventListener("click",()=>{
+      window.location.href="shopping.html" ; 
+    })
+    
 </script>
 

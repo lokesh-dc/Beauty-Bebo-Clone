@@ -6,15 +6,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopping</title>
     <link rel="stylesheet" href="./Styles/shopping.css">
+    <link rel="stylesheet" href="./Styles/Navbar.css">
 </head>
 <body>
+  <div id="navbar"></div>
     <h1>SHOPPING CART</h1>
     
-    <div id="main">
-        <div><p>ITEM</p></div>
-        <div><p>PRICE <SPan>QUANTITY</SPan><SPan>SUBTOTAL</SPan></p></div>
-        
-    </div>
-    <hr>
+      <div id="main">
+        <div id="items">
+
+            <div id="line-1">
+                <div id="first"><p>ITEM</p></div>
+                <div id="second"><p> PRICE QTY SUBTOTAL</p></div>
+                </div >
+                <hr id="dash">
+                <div id="fashion">
+                <div id="bebo"><img id="beauty" src="https://www.beautybebo.com/pub/media/catalog/product/cache/9afc37bdf46fae888adf23d57cf627ad/v/a/va11.jpg" alt=""></div>
+                <div id="name">WOW SKIN SCIENCE UBTAN BODY WASH</div>
+                <div id="last"> ₹285.00 <input id="dabba" type="text" inputmode="numeric"> ₹285.00</div>
+              
+                </div>
+                <hr>
+                <div id="btn"><button>Edit</button><button>Remove Item</button></div>
+                  <hr>
+
+                  <div id="bottom">
+                    <div > <button class="key">CONTINUE SHOPPING</button><button class="key">UPDATE SHOPPING CART</button></div>
+                  </div>
+              </div>
+           
+            
+
+        <div id="summary">
+          <h2>SUMMARY</h1>
+            <div> <select name="" id="">
+              <option value="">ESTIMATE SHIPPING AND TAX</option>
+              <option value="India">Country</option>
+              <option value="Please select a region , state or province">State</option>
+              <option value="">Zip / Postal Code</option>
+            </select> </div>
+            <div> Subtotal ₹796.00 <hr></div>
+          
+            <div>Shipping (Best Way-Max Business days) ₹0.00 <hr></div>
+            <div>Order Total Incl.GST ₹796.00 <hr></div>
+            <div><select name="" id="">
+              <option value="">APPLY DISCOUNT CODE</option>
+              <option value="">Enter discount code</option>
+              <option value="">
+            </select> <hr></div>
+           
+            <button id="switch">PROCEED TO CHECKOUT</button>
+        </div>
+      </div>  
 </body>
 </html>
+<script type="module" >
+ import navbar  from "./components/navbar.js"
+ document.getElementById("navbar").innerHTML = navbar();
+</script>

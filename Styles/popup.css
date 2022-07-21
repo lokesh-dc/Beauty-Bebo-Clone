@@ -77,7 +77,7 @@ margin: auto;
  display: flex;
  gap: 10%;
 }
-.btn
+#btn-1
 {
   border-radius: 20px;
   width: 96%;
@@ -87,7 +87,16 @@ margin: auto;
   color: white;
   border: 0px;
 }
-
+#btn-2
+{
+  border-radius: 20px;
+  width: 96%;
+  height: 70%;
+  margin: auto;
+  background-color:#dd0285;
+  color: white;
+  border: 0px;
+}
 #pric{
 color: #dd0285;
 }

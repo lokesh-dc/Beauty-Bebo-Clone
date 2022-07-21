@@ -1,0 +1,19 @@
+#main
+{
+    width: 95%;
+    height: 40px;
+    border: 1px solid red;
+    display: flex;
+    justify-content: space-between;
+}
+#main  div{
+    width: 290px;
+    height: 35px;
+    border: 1px solid green;
+}
+hr{
+    height:3px;
+    color:gray;
+    background-color: gray;
+   
+}

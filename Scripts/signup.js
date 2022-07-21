@@ -2,9 +2,7 @@ import navbar from "../Components/navbar.js"
 
 document.getElementById("navbar").innerHTML = navbar()
 
-document.getElementById("magic").addEventListener("click",() =>{
-    document.getElementById("cart-popup").style.visibility="visible";
-    });
+
 
 
 async function submit(){

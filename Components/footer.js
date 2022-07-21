@@ -49,7 +49,7 @@ let footer = () => {
 
 <div>
     <div>
-        <img src="./Images/payment.png" alt="">
+        <img src="https://www.beautybebo.com/pub/media/wysiwyg/payment.png" alt="">
     </div>
     <div>
         <h1>Signup For Newsletter</h1>

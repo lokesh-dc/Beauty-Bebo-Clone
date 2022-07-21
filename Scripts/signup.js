@@ -22,14 +22,14 @@ let user = fname+lname + (Math.random() * 1000).toFixed(0);
 // console.log(fname + " " +lname)
     let registration = {
         name : fname + " " +lname,
-        email : document.getElementById("email").value,
-        username : user,
+        email : user,
+        username : document.getElementById("email").value,
         password : document.getElementById("password").value,
         mobile : document.getElementById("mobile").value,
         description : "qwertsdfg"
     }
 
-
+console.log(registration.username)
     registration = JSON.stringify(registration)
     let registerDataLink =  "https://masai-api-mocker.herokuapp.com/auth/register";
 
@@ -45,6 +45,7 @@ let user = fname+lname + (Math.random() * 1000).toFixed(0);
     console.log(data)
     if(data.error===false){
         alert("Successfully Registerd")
+        // alert(user)
         window.location.href = "./account.html"
     }else{
         alert("Try Again")

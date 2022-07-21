@@ -36,6 +36,7 @@
     background-color: rgb(68,68,68);
     color: white;
     padding: 8px;
+    border: none;
 }
 #check{
     display: flex;
@@ -137,4 +138,7 @@
 #passwordStrength{
     margin-top: -12px;
     margin-bottom: 20px;
+}
+#but:hover{
+    background-color: #dd0285;
 }

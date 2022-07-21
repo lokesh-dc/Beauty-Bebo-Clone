@@ -1,0 +1,81 @@
+#footer{
+    background-color: black;
+    padding: 50px 10%;
+    border-top: 2px solid var(--pink);
+}
+
+#footer>div:first-child{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap:10px;
+    color: grey;
+    line-height: 2rem;
+    padding-bottom: 30px;
+    border-bottom: 1px solid white;
+}
+
+#footer>div:first-child a{
+    color: grey;
+    text-decoration: none;
+}
+
+#footer>div:first-child a:hover{
+    color: var(--pink);
+}
+#footer>div:first-child li{
+    margin-left: 25px;
+}
+#footer>div:first-child>div:first-child{
+    position: relative;
+}
+
+#footer>div:first-child h2{
+    color: white;
+    padding: 10px 0;
+    border-bottom: 1px dashed var(--pink);
+    width: fit-content;
+    margin-bottom: 10px;
+}
+
+#footer>div:first-child img{
+    width: 20px;
+    background-color: var(--pink);
+    padding: 10px;
+    border-radius: 50%;
+}
+
+#footer>div:last-child,
+#footer>div:last-child>div{
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    color: white;
+    justify-content: space-between;
+    height: 60px;
+}
+
+#footer>div:first-child>div>div{
+    position: absolute;
+    display: flex;
+    gap: 10px;
+    bottom: 0;
+}
+h1{
+    font-size: 2rem;
+    margin-right: 20px;
+}
+
+#newsletter{
+    gap: 0;
+    display: flex;
+    height: 40px;
+}
+#newsletter>button{
+    background-color: var(--pink);
+    padding: 0 30px;
+    color: white;
+}
+
+
+
+

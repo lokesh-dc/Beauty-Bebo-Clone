@@ -1,3 +1,7 @@
+import navbar from "../Components/navbar.js"
+
+document.getElementById("navbar").innerHTML = navbar()
+
 
 
 
@@ -39,3 +43,11 @@ let user = fname+lname + (Math.random() * 1000).toFixed(0);
         alert("Try Again")
     }
 }
+
+
+document.getElementById("but").addEventListener("click",submit)
+
+
+document.getElementById("logoDiv").addEventListener("click",function(){
+    alert("Option not available create Account Manually")
+})

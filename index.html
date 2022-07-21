@@ -7,6 +7,7 @@
     <title>Beuty Bebo</title>
     <link rel="stylesheet" href="./Styles/Navbar.css">
     <link rel="stylesheet" href="./Styles/popup.css">
+    <link rel="stylesheet" href="./Styles/footer.css">
     <style>
         #container{
             font-size: 100px;
@@ -29,6 +30,18 @@
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur nesciunt excepturi quia minus sint ut delectus quam non quos tempore, blanditiis commodi illo enim voluptates odio nam laudantium temporibus beatae? -->
       
     </div>
+
+    <div id="footer">
+  
+        </div>
+        <!-- Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur nesciunt excepturi quia minus sint ut delectus quam non quos tempore, blanditiis commodi illo enim voluptates odio nam laudantium temporibus beatae?
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur nesciunt excepturi quia minus sint ut delectus quam non quos tempore, blanditiis commodi illo enim voluptates odio nam laudantium temporibus beatae?
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur nesciunt excepturi quia minus sint ut delectus quam non quos tempore, blanditiis commodi illo enim voluptates odio nam laudantium temporibus beatae?
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur nesciunt excepturi quia minus sint ut delectus quam non quos tempore, blanditiis commodi illo enim voluptates odio nam laudantium temporibus beatae?
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur nesciunt excepturi quia minus sint ut delectus quam non quos tempore, blanditiis commodi illo enim voluptates odio nam laudantium temporibus beatae?
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur nesciunt excepturi quia minus sint ut delectus quam non quos tempore, blanditiis commodi illo enim voluptates odio nam laudantium temporibus beatae? -->
+
+    </div>
    
 </body>
 
@@ -47,5 +60,9 @@ document.getElementById("magic").addEventListener("click",() =>{
 document.getElementById("cart-popup").style.visibility="visible";
 });
 
+    import navbar from "./components/navbar.js"
+    import footer from "./components/footer.js"
+    document.getElementById("navbar").innerHTML = navbar();
+    document.getElementById("footer").innerHTML = footer();
 </script>
 

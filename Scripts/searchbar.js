@@ -37,6 +37,13 @@ function append(data) {
         price.innerHTML = `&#8377 ${Math.floor(el.price * 79)}`;
 
 
+        let rating = document.createElement("p")
+        let rate = Math.floor(Math.random() * 5) + 1;
+        let star = ""
+        for (let j = 0; j < rate; j++) {
+            star += "⭐";
+        }
+        rating.innerText = star;
 
         let btn = document.createElement("button");
         btn.innerHTML = `&#x1f6d2 Add To Cart`;
@@ -52,7 +59,7 @@ function append(data) {
         };
 
 
-        div.append(img, p, price, btn, btn2);
+        div.append(img, p, price, rating, btn, btn2);
         document.querySelector("#container").append(div)
     })
 };

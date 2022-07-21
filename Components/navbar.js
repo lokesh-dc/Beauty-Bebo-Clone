@@ -28,7 +28,7 @@ let navbar = () => {
                 <img src="./Images/wishlist.png" id="wishlist" alt="Wishlist">
                 <div id="account">
                     <img src="./Images/user.png" id alt="">
-                    <p>My Account</p>
+                    <p> My Account</p>
                 </div>
             </div>
         </div>
@@ -44,8 +44,7 @@ let navbar = () => {
             <h3>brands</h3>
             <div id="magic" >
                 <img src="./Images/shopping-bag.png" alt="">
-                <h3 id="cart" >My cart</h3>
-    
+                <h3 id="cart" >My cart - ₹0.00</h3>
             </div>
         </div>
         
@@ -54,7 +53,7 @@ let navbar = () => {
     
             <div id="product">
               <div id="pic">
-                <img id="image" src="https://www.beautybebo.com/pub/media/catalog/product/cache/9afc37bdf46fae888adf23d57cf627ad/d/4/d4fb39c8904311904267__1_.jpg" alt="">
+                <img id="image" src="./Images/payment.png" alt="">
               </div>
               <div id="price">
                 <div>Wow Onion Care Combo</div>

@@ -46,10 +46,12 @@
     width: 100%;
 }
 #top-section li {
-    padding-left: 20px;
+    padding: 4px 20px;
     position: relative;
     margin-bottom: 10px;
-    width: 100%
+    width: 100%;
+    cursor:pointer;
+
   }
   #top-section li:hover{
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -86,10 +88,16 @@
     border: 1px solid rgba(128, 128, 128, 0.295);
 }
 #arrivals>div{
+    border: 1px solid transparent;
     border-right: 1px solid rgba(128, 128, 128, 0.212);
 }
 #arrivals>div:last-child{
     border-right: none;
+}
+
+#arrivals>div:hover{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border: 2px solid var(--pink);
 }
 .product>div>div{
     display: flex;

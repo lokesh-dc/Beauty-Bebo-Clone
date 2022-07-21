@@ -1,10 +1,15 @@
 import navbar from "../Components/navbar.js"
-
+import footer from "../Components/footer.js"
 document.getElementById("navbar").innerHTML = navbar()
+
+document.getElementById("footer").innerHTML = footer()
+
+
 
 document.getElementById("magic").addEventListener("click",() =>{
     document.getElementById("cart-popup").style.visibility="visible";
     });
+
 
 
 async function submit(){

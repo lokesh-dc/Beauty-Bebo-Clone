@@ -3,14 +3,12 @@ let getdata = async (query,container,limit) =>{
 
     let res = await fetch(url);
     let data = await res.json();
-    console.log(data);
     append(data,container,limit);
 }
 
 let append = (data,container,limit) => {
     let appendingDiv = document.getElementById(container);
     appendingDiv.innerHTML = null;
-    console.log(data);
     for(let i=0;i<data.length;i++){
         if(i>limit)
             break;

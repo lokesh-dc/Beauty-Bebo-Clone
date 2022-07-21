@@ -7,16 +7,13 @@
     padding: 0;
     font-family: 'Roboto', sans-serif;
     font-size: 1rem;
-   
 }
 :root{
     --pink : #dd0285;
-   
 }
 #navbar{
     position: sticky;
     top:-20%;
-    cursor: pointer;
 }
 #navbar>div{
     display:flex;

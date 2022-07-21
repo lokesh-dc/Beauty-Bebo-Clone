@@ -1,5 +1,5 @@
 let navbar = () => {
-    return `
+  return `
     <div id="advertisement-div">
         <img src="./Images/homepage_ad.jpg" alt="advertisement.jpeg">
         <img src="./Images/playButton.png" alt="">
@@ -43,13 +43,38 @@ let navbar = () => {
         <h3>fragrance</h3>
         <h3>ayurveda</h3>
         <h3>brands</h3>
-        <div>
+        <div id="magic" >
             <img src="./Images/shopping-bag.png" alt="">
-            <h3 id="cart">My cart</h3>
+            <h3 id="cart" >My cart</h3>
+
         </div>
-    </div>`
+    </div>
+    
+    <!-- Pop-up -->
+    <div id="cart-popup">
+
+        <div id="product">
+          <div id="pic">
+            <img id="image" src="https://www.beautybebo.com/pub/media/catalog/product/cache/9afc37bdf46fae888adf23d57cf627ad/d/4/d4fb39c8904311904267__1_.jpg" alt="">
+          </div>
+          <div id="price">
+            <div>Wow Onion Care Combo</div>
+            <div>Qty:  <input id="box" type="text" inputmode="numeric"></div>
+          </div>
+        </div>
+  
+        <div id="total">
+          <div>
+            <div id="Subtotal">Cart Subtotal :</div> <div id = "pric">₹351.00 </div>
+          </div>
+
+          <div> 
+            <button class="btn">View Cart</button>
+            <button class="btn">Checkout</button>
+          </div>
+        </div>
+      </div>
+      `
 }
 
-
-
-export default navbar ;
+export default navbar;

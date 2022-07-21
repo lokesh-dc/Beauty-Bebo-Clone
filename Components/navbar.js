@@ -1,29 +1,7 @@
 let navbar = () => {
-  return `
-    <div id="advertisement-div">
-        <img src="./Images/homepage_ad.jpg" alt="advertisement.jpeg">
-        <img src="./Images/playButton.png" alt="">
-    </div>
-
-    <div id="search-section">
-        <img src="./Images/logo.png" alt="Beauty BEBO">
-        <div>
-            <select name="" id="">
-                <option value="">All Brands</option>
-                <option value="almay">Almay</option>
-                <option value="alva">alva</option>
-                <option value="anna sui">anna sui/option>
-                <option value="annabelle">annabelle</option>
-                <option value="l'oreal">l'oreal</option>
-                <option value="nyx">nyx</option>
-                <option value="physicians formula">physicians formula</option>
-                <option value="salon perfect">salon perfect</option>
-                <option value="piggy paint">piggy paint</option>
-                <option value="wet n wild">wet n wild</option>
-                <option value="zorah">zorah</option>
-            </select>
-            <input type="text" id="query" placeholder="Enter your Search">
-            <button><img src="./Images/search.svg" alt="" id="search"></button>
+  return `        <div id="advertisement-div">
+            <img src="./Images/homepage_ad.jpg" alt="advertisement.jpeg">
+            <img src="./Images/playButton.png" alt="">
         </div>
     
         <div id="search-section">
@@ -69,7 +47,9 @@ let navbar = () => {
                 <h3 id="cart" >My cart - ₹0.00</h3>
             </div>
         </div>
-    </div>
+        
+        <!-- Pop-up -->
+        <div id="cart-popup">
     
             <div id="product">
               <div id="pic">

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wish List Page</title>
+<style>
+      /* *{
+            border: 1px solid red;
+        } */
+        #container {
+                /* border: 1px solid blue; */
+                padding: 1%;
+                display: grid;
+                grid-template-columns: repeat(5,1fr );
+                grid-gap: 1% 2%;
+                text-align: center;
+                
+                /* background-color: #df4d85; */
+                /* background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2PhpmamwInMWH8pcJF2jyfsfL6vn4AuICRA&usqp=CAU); */
+                overflow: auto;
+            }
+            #container > div {
+                box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+                border-radius: 10% 0;
+                background-color: white;
+            }
+            #container > div > img {
+                width: 100%;
+                height: 250px;
+                border-radius: 10% 0 0 0;
+            }
+            button {
+                /* margin-top: -5%; */
+                font-size: 15px;
+                border-radius: 5px;
+                font-weight: bold;
+                margin-left: 5px;
+                color: white;
+                background-color: rgb(247, 55, 173);
+                height: 8%;
+                margin-bottom: 10%;
+                border: 0;
+                box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+            }
+            button:hover {
+                color: white;
+                background-color: #e71c6a;
+            }
+            #container > div > div {
+                display: flex;
+                justify-content: center;
+                /* padding-left: 5%; */
+                margin-top: -5%;
+                color: #df4d85;
+            }
+            P{
+                margin-top: 0;
+                font-weight: bold;
+                color: gray;
+                padding-left: 5%;
+            }
+            h4 {
+                text-decoration: line-through;
+                color: gray;
+                margin-left: 5%;
+            }
+            @media only screen and (min-width: 721px) and (max-width: 1024px) {
+                #container {
+                    grid-template-columns: repeat(3, 1fr);
+                }
+            }
+            @media only screen and (min-width: 321px) and (max-width: 720px) {
+                #container {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            }
+            @media only screen and (min-width: 0px) and (max-width: 320px) {
+                #container {
+                    grid-template-columns: repeat(1, 1fr);
+                }
+            }
+</style>
+
+</head>
+<body>
+    <h1>Wishlist Portal</h1>
+    <div id="container">
+
+
+    </div>
+</body>
+</html>
+<script>
+      const wishlistData=JSON.parse(localStorage.getItem("wishlistData"))||[]
+      const Cart=JSON.parse(localStorage.getItem("Cart"))||[]
+    
+    wishlistData.map(function(el){
+        const box = document.createElement("div");
+    
+    const image = document.createElement("img");
+    image.setAttribute("src", el.image);
+    
+    const par = document.createElement("p");
+    par.textContent = el.name;
+    
+    const cbox = document.createElement("div");
+    
+    const price = document.createElement("h2");
+    price.textContent = el.price;
+    
+    const strickPrice = document.createElement("h4");
+    strickPrice.textContent = el.strikedoffprice;
+    
+    const button = document.createElement("button");
+    button.textContent = "Add To Cart";
+    button.addEventListener("click",function(){
+        addCart(el)
+    })
+    
+    cbox.append(price, strickPrice);
+    box.append(image, par, cbox,button);
+    document.querySelector("#container").append(box);
+    
+    });
+
+    function addCart(ele){
+        Cart.push(ele)
+    
+        localStorage.setItem("CartItemsSkin",JSON.stringify(CartArr))
+        alert("Product Added to cart Succesfully")
+    }
+
+
+</script>

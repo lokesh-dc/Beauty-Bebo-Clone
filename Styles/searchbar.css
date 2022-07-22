@@ -66,3 +66,33 @@ button {
     display: block;
     position: absolute;
 }
+
+#select {
+    margin-left: 33%;
+    margin-top: 20px;
+    padding: 5px 10px;
+}
+
+/* #filter {
+    position: relative;
+    display: inline-block;
+}
+
+#brandsort {
+    display: none;
+    position: absolute;
+    overflow: auto;
+    border: 1px solid gray;
+    z-index: 1;
+}
+
+#brandsort>a {
+    color: gray;
+    padding: 5px 20px 5px 5px;
+    text-decoration: none;
+}
+
+#brandsort>a:hover {
+    background-color: aliceblue;
+} */
+

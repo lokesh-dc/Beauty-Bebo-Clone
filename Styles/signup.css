@@ -7,6 +7,7 @@
     width: 40%;
     margin: auto;
     display: grid;
+    margin-bottom: 30px;
     /* margin-top: 50px; */
     
 }
@@ -86,6 +87,11 @@
     /* border: 1px #c23321; */
     
 
+
+}
+.google:hover{
+    background-color: #c23321;
+
 }
 #box3{
     display: flex;
@@ -108,6 +114,9 @@
 }
 .facebook{
     background-color: rgb(56,86,159);
+}
+.facebook:hover{
+    background-color: #2d4373;
 }
 .head{
     /* text-align: center; */

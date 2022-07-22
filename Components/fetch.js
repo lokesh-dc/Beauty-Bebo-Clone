@@ -3,14 +3,12 @@ let getdata = async (query,container,limit) =>{
 
     let res = await fetch(url);
     let data = await res.json();
-    console.log(data);
     append(data,container,limit);
 }
 
 let append = (data,container,limit) => {
     let appendingDiv = document.getElementById(container);
     appendingDiv.innerHTML = null;
-    console.log(data);
     for(let i=0;i<data.length;i++){
         if(i>limit)
             break;
@@ -18,9 +16,7 @@ let append = (data,container,limit) => {
         let el = data[i];
         let div = document.createElement("div");
         div.setAttribute("class","product");
-        div.onclick = () => {
-            product(el)
-        };
+        
         let detailsDiv = document.createElement("div");
         let img = document.createElement("img");
         img.src = el.image_link;
@@ -56,7 +52,9 @@ let append = (data,container,limit) => {
         priceDiv.append(oldPrice,price,discountonProduct)
 
         detailsDiv.append(img,title,rating,priceDiv);
-
+        detailsDiv.onclick = () =>{
+            product(el);
+        }
 
         let btnsDiv = document.createElement("div");
         let addToCart = document.createElement("button");

@@ -67,8 +67,8 @@ let navbar = () => {
               </div>
     
               <div> 
-                <button class="btn">View Cart</button>
-                <button class="btn">Checkout</button>
+                <button id="btn-1">View Cart</button>
+                <button id="btn-2">Checkout</button>
               </div>
             </div>
           </div>`

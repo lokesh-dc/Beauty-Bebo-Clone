@@ -51,3 +51,11 @@ function getusername({token},{username}){
         console.log(err)
     })
 }   
+
+
+
+
+document.getElementById("logoDiv").addEventListener("click",function(){
+    alert("Option not available Login Manually")
+})
+

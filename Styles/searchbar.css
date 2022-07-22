@@ -23,7 +23,7 @@
     width: 90%;
     height: auto;
     margin: auto;
-    border: 1px solid;
+    /* border: 1px solid; */
     display: flex;
 }
 
@@ -41,4 +41,28 @@ button {
     color: white;
     margin-right: 5px;
     cursor: pointer;
+}
+
+#filter ul {
+    list-style: none;
+}
+
+#filter ul li a {
+    text-decoration: none;
+    color: gray;
+}
+
+#brand,
+#price,
+#skintype {
+    display: none;
+}
+
+#filter ul li:hover {
+    background-color: rgb(85, 115, 141);
+}
+
+#filter ul li:hover #brand {
+    display: block;
+    position: absolute;
 }

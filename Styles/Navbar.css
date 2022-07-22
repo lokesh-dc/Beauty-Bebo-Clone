@@ -12,7 +12,7 @@
 }
 #navbar{
     position: sticky;
-    top: -180px;
+    top: -190px;
     cursor: pointer;
     background-color: white;
     z-index: 1000;

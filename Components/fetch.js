@@ -11,6 +11,7 @@ let getdata = async (query,container,limit,brand) =>{
 let append = (data,container,limit) => {
     if(data.length===0)
         return;
+        
     let appendingDiv = document.getElementById(container);
     appendingDiv.setAttribute("class","productDiv")
     appendingDiv.innerHTML = null;
@@ -53,7 +54,7 @@ let append = (data,container,limit) => {
         oldPrice.innerText = `₹ ${old}`;
         
         let price = document.createElement("p");
-        price.innerHTML = `&#8377 ${Math.floor(+el.price * 79)}`;
+        price.innerHTML = ` ${Math.floor(+el.price * 79)}`;
         priceDiv.append(oldPrice,price,discountonProduct)
 
         detailsDiv.append(img,title,rating,priceDiv);
@@ -63,13 +64,13 @@ let append = (data,container,limit) => {
 
         let btnsDiv = document.createElement("div");
         let addToCart = document.createElement("button");
-        addToCart.innerHTML = `&#x1f6d2 Add To Cart`;
+        addToCart.innerHTML = `<img src="./Images/cart.png"> Add To Cart`;
         addToCart.onclick = () => {
             addtocart(el)
         };
 
         let addToWishlist = document.createElement("button");
-        addToWishlist.innerHTML = `&#129293`;
+        addToWishlist.innerHTML = `<img src="./Images/heart-white.png">`;
         addToWishlist.onclick = () => {
             wishlist(el)
         }

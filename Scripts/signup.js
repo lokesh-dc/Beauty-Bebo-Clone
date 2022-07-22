@@ -48,7 +48,7 @@ console.log(registration.username)
         // alert(user)
         window.location.href = "./account.html"
     }else{
-        alert("Try Again")
+        alert("User Already Exists")
     }
 }
 

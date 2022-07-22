@@ -1,0 +1,123 @@
+#accMain{
+    display: grid;
+    width: 80%;
+    grid-template-columns: 21% 75%;
+    grid-template-rows: repeat(2,1fr);
+    margin: auto;
+    /* border: 1px solid; */
+    gap: 30px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.accBox{
+    display: flex;
+    gap: 30px;
+    /* border: 1px solid; */
+    /* justify-content: center; */
+}
+.accBox > div{
+    width: 50%;
+    border: 1px solid #dddddd;
+    height: 250px;
+}
+#accSidebar1{
+    /* padding: 20px; */
+    /* border: 1px solid; */
+    padding-right: 40px;
+}
+#accSidebar1 > h3{
+    color: #666666;
+    font-size: 14px;
+    padding: 5px 18px 12px 15px;
+}
+#accSidebar1 > h3:hover{
+    background-color: #e8e8e8;
+    color: #666666;
+}
+#accSidebar1 > h2{
+    color: #666666;
+    font-size: 14px;
+    padding: 5px 18px 5px 15px;
+    border-left:#dd0285 3px solid;
+    padding-top: 10px;
+
+}
+#accSidebar1 > h3{
+    padding-top: 10px;
+}
+.accBox > div > h4{
+    /* margin: 10px; */
+    padding: 13px;
+    /* border: 1px solid; */
+    font-size: 14px;
+    background-color: #f5f5f5;
+    color: #666666;
+}
+
+.accBox > div > p{
+    margin-top: 5px;
+    padding: 10px;
+    font-size: 14px;
+    background-color: #fbfbfb;
+    color:  #666666;
+}
+.accbttn > button{
+    /* margin-top: 100%; */
+    padding: 5px 10px;
+    background-color: #dd0285;
+    color:  #ffffff;
+    /* margin-top: 20%; */
+    margin-left: 10px;
+    border: none;
+}
+
+.accbttn{
+    border: 1px solid #dddddd;
+    display: flex;
+    /* margin-top: 30%; */
+    position: absolute;
+    bottom: 0;
+    align-items: center;
+    height: 40px;
+    width: 100%;
+    font-size: 12px;
+}
+.dicspaces{
+    position: relative;
+}
+.accbttn:first-child{
+    margin-top: 20%
+}
+.accBox > h2{
+    font-size: 16px;
+}
+.accBox > p{
+    font-size: 14px;
+}
+.info{
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+.myacc{
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 10px;
+    padding: 10px;
+}
+#imgDil > img{
+    width: 100%;
+}
+.underline{
+    border-bottom: 1px solid #666666 ;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+.dicspaces{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+}

@@ -1,4 +1,11 @@
-let search = async () => {
+import navbar from "../Components/navbar.js"
+document.getElementById("navbar").innerHTML = navbar();
+
+
+
+
+
+let searchfun = async () => {
     let query = document.querySelector("#query").value;
     getData(query)
 
@@ -78,3 +85,4 @@ let wishlist = (data) => {
     localStorage.setItem("wishlist", JSON.stringify(data))
     // window.location.href = "wishlist.html"
 };
+document.getElementById("search").addEventListener("click", searchfun)

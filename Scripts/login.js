@@ -21,6 +21,8 @@ async function login(){
         }
     })
     let data = await response.json()
+    login_data = JSON.parse(login_data)
+    getusername(data,login_data)
     if(data.error===false){
         alert("Login Successfull")
         window.location.href = "./account.html"
@@ -32,3 +34,20 @@ async function login(){
 document.getElementById("create").addEventListener("click",function(){
     window.location.href = "./signup.html"
 })
+
+function getusername({token},{username}){
+    fetch(`https://masai-api-mocker.herokuapp.com/user/${username}`,{
+    method : "GET",
+    headers : {
+        Authorization: `Bearer ${token}`
+    },
+})
+    .then((res)=>{
+        return res.json()
+    }).then((res)=>{
+        localStorage.setItem("userdata",JSON.stringify(res))
+    })
+    .catch((err)=>{
+        console.log(err)
+    })
+}   

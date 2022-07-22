@@ -1,10 +1,17 @@
 import navbar from "../Components/navbar.js"
+
+
 document.getElementById("navbar").innerHTML = navbar();
 
 
 
 
+let container = document.querySelector("#container");
 
+// let temp;
+
+
+let data
 let searchfun = async () => {
     let query = document.querySelector("#query").value;
     getData(query)
@@ -13,10 +20,15 @@ let searchfun = async () => {
 
 let getData = async (query) => {
     let url = `https://makeup-api.herokuapp.com/api/v1/products.json?brand=covergirl&product_type=${query}`
+
     let res = await fetch(url);
-    let data = await res.json()
+    data = await res.json()
     append(data)
     console.log(data);
+
+
+
+
 }
 
 
@@ -42,7 +54,6 @@ function append(data) {
 
         let price = document.createElement("p");
         price.innerHTML = `&#8377 ${Math.floor(el.price * 79)}`;
-
 
         let rating = document.createElement("p")
         let rate = Math.floor(Math.random() * 5) + 1;
@@ -86,3 +97,47 @@ let wishlist = (data) => {
     // window.location.href = "wishlist.html"
 };
 document.getElementById("search").addEventListener("click", searchfun)
+
+// window.addEventListener("load", () => {
+//     let query = localStorage.getItem("query");
+
+
+//     // temp.then((res) => {
+//     //     return res.json();
+//     // }).then((res) => {
+//     //     console.log(res);
+//     // })
+//     // console.log("temp", temp.json())
+// })
+
+
+
+// let searchfun = async () => {
+//     let query = document.querySelector("#query").value;
+
+//     data = await getdata(query, "container", 200)
+//     console.log(data)
+
+// }
+
+let selectTag = document.querySelector('#select')
+selectTag.addEventListener('change', (event) => {
+    let value = selectTag.value
+    if (value === "price:Low to High") {
+        let sortedData = data.sort((a, b) => {
+            return a.price - b.price
+        })
+        append(sortedData)
+    } else {
+        let sortedData = data.sort((a, b) => {
+            return b.price - a.price
+        })
+        append(sortedData)
+    }
+})
+
+
+// let search = document.getElementById("search")
+// search.addEventListener("click", searchfun)
+
+

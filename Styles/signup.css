@@ -83,6 +83,7 @@
 }
 .google{
     background-color: #dd4b39;
+
     /* border: 1px #c23321; */
     
 
@@ -150,4 +151,11 @@
 }
 #but:hover{
     background-color: #dd0285;
+}
+.google:hover{
+    background-color: #c23321;
+
+}
+.facebook:hover{
+    background-color: #2d4373;
 }

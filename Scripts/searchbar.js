@@ -1,4 +1,11 @@
-let search = async () => {
+import navbar from "../Components/navbar.js"
+document.getElementById("navbar").innerHTML = navbar();
+
+
+
+
+
+let searchfun = async () => {
     let query = document.querySelector("#query").value;
     getData(query)
 
@@ -6,15 +13,10 @@ let search = async () => {
 
 let getData = async (query) => {
     let url = `https://makeup-api.herokuapp.com/api/v1/products.json?brand=covergirl&product_type=${query}`
-
     let res = await fetch(url);
     let data = await res.json()
     append(data)
     console.log(data);
-
-
-
-
 }
 
 
@@ -42,6 +44,13 @@ function append(data) {
         price.innerHTML = `&#8377 ${Math.floor(el.price * 79)}`;
 
 
+        let rating = document.createElement("p")
+        let rate = Math.floor(Math.random() * 5) + 1;
+        let star = ""
+        for (let j = 0; j < rate; j++) {
+            star += "⭐";
+        }
+        rating.innerText = star;
 
         let btn = document.createElement("button");
         btn.innerHTML = `&#x1f6d2 Add To Cart`;
@@ -57,7 +66,7 @@ function append(data) {
         };
 
 
-        div.append(img, p, price, btn, btn2);
+        div.append(img, p, price, rating, btn, btn2);
         document.querySelector("#container").append(div)
     })
 };
@@ -76,3 +85,4 @@ let wishlist = (data) => {
     localStorage.setItem("wishlist", JSON.stringify(data))
     // window.location.href = "wishlist.html"
 };
+document.getElementById("search").addEventListener("click", searchfun)

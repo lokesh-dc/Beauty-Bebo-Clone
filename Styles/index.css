@@ -1,0 +1,150 @@
+:root{
+    --pink : #dd0285;   
+}
+
+#container{
+    display:flex;
+    flex-direction: column;
+    gap:10px;
+    padding: 10px 0;;
+}
+
+#container>div{
+    width: 80%;
+    margin:auto;
+    padding: 5px;
+    display: grid;
+    gap:20px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+#container>div:first-child{
+    grid-template-columns: 1fr 3fr;
+}
+#top-section>div{
+    padding: 5px;
+}
+#top-section>div:first-child{
+    padding: 20px;
+}
+#top-section h2{
+    text-transform: uppercase;
+}
+#top-section ul{
+    margin-top: 20px;
+    text-transform: capitalize;
+    list-style: none;
+    line-height: 2rem;
+}
+#container h2>img{
+    width: 1.2rem;;
+}
+#container ul img{
+    width: 1.5rem;
+    padding-right: 10px;
+}
+#container img{
+    width: 100%;
+}
+#top-section li {
+    padding: 4px 20px;
+    position: relative;
+    margin-bottom: 10px;
+    width: 100%;
+    cursor:pointer;
+
+  }
+  #top-section li:hover{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+#top-section:before {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    font-family: FontAwesome;
+    content: "";
+    color: green;
+  }
+
+
+  #container>div:nth-child(3){
+    gap:0;
+    padding: 0;
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+#container>div>p{
+    border-bottom: 2px solid var(--pink);
+    width: fit-content;
+    padding-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+#arrivals{
+    margin-top: 0;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    text-align: center;
+    border: 1px solid rgba(128, 128, 128, 0.295);
+}
+#arrivals>div{
+    border: 1px solid transparent;
+    border-right: 1px solid rgba(128, 128, 128, 0.212);
+}
+#arrivals>div:last-child{
+    border-right: none;
+}
+
+#arrivals>div:hover{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border: 2px solid var(--pink);
+}
+.product>div>div{
+    display: flex;
+    justify-content: center;
+    gap:10px;
+}
+.product>div>div>p:first-child{
+    text-decoration: line-through;
+    color: grey;
+}
+.product>div>div>p:nth-child(3){
+    color: green;
+    font-weight: bold ;
+}
+#arrivals img{
+    width:50%;
+    display: block;
+    margin: auto;
+}
+
+#arrivals>div>div{
+    display: flex;
+    gap:10px;
+    justify-content: center;
+    margin: 10px;
+}
+#arrivals>div>div:first-child{
+    flex-direction: column;
+}
+
+
+#arrivals button{
+    border: none;
+    padding: 0.2rem 1rem;
+    border-radius: 5px;
+    background-color: grey;
+    color: white;
+    font-size: 0.9rem;
+}
+
+
+#arrivals button:first-of-type{
+    background-color: var(--pink);
+}
+
+
+
+#container>div:nth-child(4){
+    grid-template-columns: repeat(7,1fr);
+}

@@ -7,6 +7,7 @@
     width: 40%;
     margin: auto;
     display: grid;
+    margin-bottom: 30px;
     /* margin-top: 50px; */
     
 }
@@ -36,6 +37,7 @@
     background-color: rgb(68,68,68);
     color: white;
     padding: 8px;
+    border: none;
 }
 #check{
     display: flex;
@@ -80,9 +82,14 @@
     gap: 30px;
 }
 .google{
-    background-color: #c23321;
+    background-color: #dd4b39;
     /* border: 1px #c23321; */
     
+
+
+}
+.google:hover{
+    background-color: #c23321;
 
 }
 #box3{
@@ -106,6 +113,9 @@
 }
 .facebook{
     background-color: rgb(56,86,159);
+}
+.facebook:hover{
+    background-color: #2d4373;
 }
 .head{
     /* text-align: center; */
@@ -137,4 +147,7 @@
 #passwordStrength{
     margin-top: -12px;
     margin-bottom: 20px;
+}
+#but:hover{
+    background-color: #dd0285;
 }

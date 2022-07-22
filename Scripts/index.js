@@ -6,6 +6,12 @@ document.getElementById("magic").addEventListener("click",() =>{
 document.getElementById("cart-popup").style.visibility="visible";
 });
 
+// on seartching redirect to search page and append products data
+document.getElementById("search").addEventListener("click",()=>{
+    let query = document.getElementById('query').value;
+    localStorage.setItem("query",query);
+    window.location.href = "searchbar.html";
+})
 
 let count = 0;
 
@@ -32,8 +38,9 @@ window.addEventListener("load",()=>{
 import footer from "../components/footer.js"
 document.getElementById("footer").innerHTML = footer();
 
-// shopping-cart
 
+
+// shopping-cart
 document.getElementById("btn-1").addEventListener("click",()=>{
     window.location.href = "shopping.html";
    })

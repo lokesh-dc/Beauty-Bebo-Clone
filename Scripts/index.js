@@ -18,6 +18,8 @@ let slider = () => {
 
     document.getElementById('slider').src = source;
     count++;
+
+
 }
 setInterval(slider,2000);
 
@@ -29,3 +31,9 @@ window.addEventListener("load",()=>{
 
 import footer from "../components/footer.js"
 document.getElementById("footer").innerHTML = footer();
+
+// shopping-cart
+
+document.getElementById("btn-1").addEventListener("click",()=>{
+    window.location.href = "shopping.html";
+   })

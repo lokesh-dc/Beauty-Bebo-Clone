@@ -1,5 +1,8 @@
-let getdata = async (query, container, limit) => {
-    let url = `https://makeup-api.herokuapp.com/api/v1/products.json?brand=covergirl&product_type=${query}`;
+let getdata = async (query,container,limit,brand) =>{
+    if(brand===undefined)
+        brand = "covergirl";
+    
+    let url = `https://makeup-api.herokuapp.com/api/v1/products.json?brand=${brand}&product_type=${query}`;
 
     let res = await fetch(url);
     let data = await res.json();
@@ -7,9 +10,11 @@ let getdata = async (query, container, limit) => {
     return data;
 }
 
-let append = (data, container, limit) => {
-    console.log(data)
+let append = (data,container,limit) => {
+    if(data.length===0)
+        return;
     let appendingDiv = document.getElementById(container);
+    appendingDiv.setAttribute("class","productDiv")
     appendingDiv.innerHTML = null;
     for (let i = 0; i < data.length; i++) {
         if (i > limit)
@@ -50,8 +55,9 @@ let append = (data, container, limit) => {
         oldPrice.innerText = `₹ ${old}`;
 
         let price = document.createElement("p");
-        price.innerHTML = `&#8377 ${Math.floor(+el.price * 79)}`;
-        priceDiv.append(oldPrice, price, discountonProduct)
+        price.innerHTML = `₹ ${Math.floor(+el.price * 79)}`;
+        priceDiv.append(oldPrice,price,discountonProduct)
+
 
         detailsDiv.append(img, title, rating, priceDiv);
         detailsDiv.onclick = () => {
@@ -60,13 +66,13 @@ let append = (data, container, limit) => {
 
         let btnsDiv = document.createElement("div");
         let addToCart = document.createElement("button");
-        addToCart.innerHTML = `&#x1f6d2 Add To Cart`;
+        addToCart.innerHTML = `<img src="./Images/cart.png"> Add To Cart`;
         addToCart.onclick = () => {
             addtocart(el)
         };
 
         let addToWishlist = document.createElement("button");
-        addToWishlist.innerHTML = `&#129293`;
+        addToWishlist.innerHTML = `<img src="./Images/heart-white.png">`;
         addToWishlist.onclick = () => {
             wishlist(el)
         }

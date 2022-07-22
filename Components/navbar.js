@@ -5,7 +5,7 @@ let navbar = () => {
         </div>
     
         <div id="search-section">
-            <img src="./Images/logo.png" alt="Beauty BEBO">
+            <a href="./index.html"><img src="./Images/logo.png" alt="Beauty BEBO"></a>
             <div>
                 <select name="" id="">
                     <option value="">All Brands</option>

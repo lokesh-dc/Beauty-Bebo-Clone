@@ -54,7 +54,7 @@ let footer = () => {
     <div>
         <h1>Signup For Newsletter</h1>
         <div id="newsletter">                
-            <input type="text" placeholder="Sign for Newsletetr">
+            <input type="text" placeholder="Sign for Newsletter">
             <button>Subscribe</button>
         </div>
     </div>`

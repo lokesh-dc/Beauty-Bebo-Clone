@@ -1,10 +1,14 @@
+//    Popup
+
 import navbar  from "../Components/navbar.js"
 
 document.getElementById("navbar").innerHTML = navbar();
 
-document.getElementById("magic").addEventListener("click",() =>{
-document.getElementById("cart-popup").style.visibility="visible";
-});
+// document.getElementById("magic").addEventListener("click",() =>{
+//     let data = JSON.parse(localStorage.getItem("product"));
+//     console.log(data);
+// });
+
 
 // on seartching redirect to search page and append products data
 document.getElementById("search").addEventListener("click",()=>{

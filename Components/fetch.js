@@ -1,13 +1,18 @@
-let getdata = async (query,container,limit) =>{
-    let url = `https://makeup-api.herokuapp.com/api/v1/products.json?brand=covergirl&product_type=${query}`;
-
+let getdata = async (query,container,limit,brand) =>{
+    if(brand===undefined)
+        brand = "covergirl";
+    
+    let url = `https://makeup-api.herokuapp.com/api/v1/products.json?brand=${brand}&product_type=${query}`;
     let res = await fetch(url);
     let data = await res.json();
     append(data,container,limit);
 }
 
 let append = (data,container,limit) => {
+    if(data.length===0)
+        return;
     let appendingDiv = document.getElementById(container);
+    appendingDiv.setAttribute("class","productDiv")
     appendingDiv.innerHTML = null;
     for(let i=0;i<data.length;i++){
         if(i>limit)

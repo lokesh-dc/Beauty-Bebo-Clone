@@ -32,6 +32,7 @@ let getData = async (query) => {
 }
 
 
+
 function append(data) {
     let container = document.querySelector("#container");
     container.innerHTML = "";
@@ -135,9 +136,6 @@ selectTag.addEventListener('change', (event) => {
     }
 })
 
-
-// let search = document.getElementById("search")
-// search.addEventListener("click", searchfun)
 
 
 document.getElementById("brandspage").addEventListener("click",function(){

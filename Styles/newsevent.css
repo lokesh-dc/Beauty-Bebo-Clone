@@ -1,0 +1,37 @@
+#main {
+    display: flex;
+    width: 95%;
+    height: auto;
+    margin: auto;
+}
+
+#left {
+    width: 25%;
+    height: 500px;
+    /* border: 1px solid; */
+}
+
+#right {
+    width: 75%;
+    height: 500px;
+    /* border: 1px solid; */
+}
+
+#right>hr {
+    margin-bottom: 50px;
+}
+
+#left>hr {
+    width: 90%;
+
+}
+
+#left>p:hover {
+    color: #dd0285;
+    cursor: pointer;
+}
+
+#right>div>p>span {
+    font-size: 25px;
+    color: #dd0285;
+}

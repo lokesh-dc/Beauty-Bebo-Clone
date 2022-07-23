@@ -29,8 +29,8 @@
 
 #sidebar {
     width: 28%;
-    height: 500px;
-    border: 1px solid;
+    height: auto;
+    /* border: 1px solid; */
 }
 
 button {
@@ -52,20 +52,9 @@ button {
     color: gray;
 }
 
-#brand,
-#price,
-#skintype {
-    display: none;
-}
 
-#filter ul li:hover {
-    background-color: rgb(85, 115, 141);
-}
 
-#filter ul li:hover #brand {
-    display: block;
-    position: absolute;
-}
+
 
 #select {
     margin-left: 33%;
@@ -96,3 +85,6 @@ button {
     background-color: aliceblue;
 } */
 
+hr {
+    width: 80%;
+}

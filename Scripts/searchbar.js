@@ -120,13 +120,7 @@ window.addEventListener("load", () => {
 
 
 
-// let searchfun = async () => {
-//     let query = document.querySelector("#query").value;
 
-//     data = await getdata(query, "container", 200)
-//     console.log(data)
-
-// }
 
 let selectTag = document.querySelector('#select')
 selectTag.addEventListener('change', (event) => {
@@ -145,22 +139,6 @@ selectTag.addEventListener('change', (event) => {
 })
 
 
-// let getfilterdata = async () => {
-//     let url = `http://makeup-api.herokuapp.com/api/v1/products.json`;
-
-//     let res = await fetch(url);
-//     data = await res.json()
-//     append(data, limit)
-//     console.log(data);
-// }
-
-// let filterfun= async () => {
-//     let price = document.querySelector("#price").value;
-
-//     getfilterdata(price, 200)
-
-// }
-
 let filtertag = document.querySelector('#pricefilter')
 console.log(filtertag)
 filtertag.addEventListener('change', (elem) => {
@@ -174,5 +152,5 @@ filtertag.addEventListener('change', (elem) => {
 })
 
 
-// })
+
 

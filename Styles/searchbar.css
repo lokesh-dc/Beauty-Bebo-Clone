@@ -4,13 +4,15 @@
     grid-template-rows: auto;
     width: 72%;
     height: auto;
+    margin-bottom: 50px;
 }
 
 #container>div {
 
     text-align: center;
     padding: 10px 10px;
-    /* border: 1px solid black; */
+    border: 0.5px solid gray;
+    border: 50%;
     font-family: Roboto;
 
 }
@@ -43,14 +45,7 @@ button {
     cursor: pointer;
 }
 
-#filter ul {
-    list-style: none;
-}
 
-#filter ul li a {
-    text-decoration: none;
-    color: gray;
-}
 
 
 
@@ -62,29 +57,27 @@ button {
     padding: 5px 10px;
 }
 
-/* #filter {
-    position: relative;
-    display: inline-block;
-}
-
-#brandsort {
-    display: none;
-    position: absolute;
-    overflow: auto;
-    border: 1px solid gray;
-    z-index: 1;
-}
-
-#brandsort>a {
-    color: gray;
-    padding: 5px 20px 5px 5px;
-    text-decoration: none;
-}
-
-#brandsort>a:hover {
-    background-color: aliceblue;
-} */
-
 hr {
     width: 80%;
+}
+
+#brand {
+
+    margin-top: 20px;
+    padding: 5px 10px;
+}
+
+#pricefilter {
+    margin-top: 20px;
+
+}
+
+#productsfilter {
+    margin-top: 20px;
+    margin-bottom: 50px;
+
+}
+
+#productsfilter>option {
+    padding-right: 30px;
 }

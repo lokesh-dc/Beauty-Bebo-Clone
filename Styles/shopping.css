@@ -1,8 +1,7 @@
-#main
+ #main
 {
     width: 95%;
     height: 400px;
-    /* border: 1px solid red; */
     display: flex;
     justify-content: space-between;
   
@@ -10,46 +9,22 @@
 #items{
     width: 50%;
     height: 180px;
-    /* border: 1px solid green; */
+   
    justify-content: flex-start;
    margin-top: 20px;
    margin-left: 20px;
-}
-
-#dash{
-    height:2px;
-    color:  rgb(197, 186, 186);
-    background-color: rgb(197, 186, 186);
    
-}
+} 
+
 #line-1
 {
-    /* border: 1px solid red; */
+    border: 1px solid red;
     display: flex;
    justify-content: space-between;
    font-weight: 600;
    color: rgb(96, 93, 93);
    font-family: 'Roboto', sans-serif ;
    font-size: 13px;
-}
-#first
-{
-    width: 10%;
-    /* border: 1px solid red; */
-}
-#second
-{
-    width: 35%;
-    /* border: 1px solid magenta; */
-    word-spacing:30px ;
-   
-}
-#fashion
-{
-    height: 100px;
-    /* border: 1px solid magenta; */
-    display: flex;
-    gap: 10px;
 }
 
 
@@ -164,4 +139,77 @@ select
 {
   width: 100%; 
   height: 30px; 
+}
+.shopImg> img{
+    
+    height: 100%;
+    width: 100%;
+  
+    border: 1px solid; 
+}
+
+#Shopdiv{
+    display: flex;
+    margin-top: 20px;
+    border: 1px solid;
+    
+   
+} 
+/* 
+th{
+    border: 1px solid;
+} */
+/* td{
+border: 1px solid red;
+} */
+.td1
+{
+    display: flex;
+}
+
+#scroll
+{
+    
+    width: 100%;;
+   
+    
+    margin: auto;
+    
+    overflow:scroll ;
+    margin: 5px;
+ }
+
+
+thead{
+    top: 0px;
+    position: sticky;
+    z-index: 10;
+    background-color: white;
+}
+
+.dabba
+{
+   
+    width: 30px;
+    height: 30px;  
+    outline: none;  
+}
+
+.shop_img
+{
+   
+    height: 70px;
+    width: 120px;
+    margin: auto; 
+    
+}
+
+
+.shop_img > img
+{
+   
+    height: 100%;
+    width: 100%;
+    margin: auto; 
+    
 }

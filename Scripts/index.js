@@ -1,8 +1,9 @@
+
 import navbar  from "../Components/navbar.js";
 import {getdata} from "../components/fetch.js"
 import footer from "../components/footer.js"
 
-// navbar section
+
 document.getElementById("navbar").innerHTML = navbar();
 
 // footer section
@@ -79,3 +80,6 @@ document.getElementById("btn-1").addEventListener("click",()=>{
    })
 
 
+   document.getElementById("brandspage").addEventListener("click",function(){
+    window.location.href = "./brands.html"
+})

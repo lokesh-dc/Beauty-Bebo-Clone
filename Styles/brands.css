@@ -1,0 +1,129 @@
+#homeDiv > div{
+    display: flex;
+    gap: 10px;
+    width: 80%;
+    margin: auto;
+}
+
+#brandsButton{
+    display: grid;
+    grid-template-columns: repeat(6,16%);
+    gap: 20px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+}
+#brandsButton > button{
+    padding: 10px;
+    line-height: 23px;
+    font-size: 12px;
+    font-weight: 700;
+    border: 1.5px solid #cccccc;
+    background-color :white;
+    color: #666666;
+}
+#brandsButton > button:hover{
+
+    background-color: #f1f7f9;
+    cursor: pointer;
+}
+
+
+#brandsmain{
+    width: 80%;
+    margin: auto;
+}
+#brandsmain > h1{
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: 400;
+}
+#navBrandHome > div{
+    display: flex;
+    gap: 10px;
+    width: 80%;
+    margin: auto;
+    padding-left: 30px;
+    padding: 10px;
+    
+    /* margin-bottom: 100px; */
+}
+#navBrandHome{
+   
+    background-color: #f5f5f5;
+    color: #666666;
+}
+#directHome:hover{
+    color: #dd0285;
+    cursor: pointer;;
+}
+
+
+
+#container{
+    border: 1px solid #ebebeb;
+    /* color: #666666; */
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: auto;
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 30px;
+}
+#namebrand{
+    width: 80%;
+    margin: auto;
+}
+
+#container > div{
+    border: .5px solid;
+    background-color: rgb(255,255,255);
+    padding: 30px;
+}
+#container > div > img{
+    object-fit: contain;
+    width: 90%;
+    background-color: #666666;
+}
+#brandName1{
+    padding: 20px 0px 40px 5px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.cat{
+    padding: 10px;
+    border-bottom: 1px solid;
+}
+#twoDiv > div:first-child > p{
+    padding: 10px;
+}
+#container > div > p{
+    font-size: 14px;
+}
+#container > div > p + p{
+    /* font-size: 54px; */
+    color: #dd0285;
+    font-weight: 800;
+}
+#container > div > button{
+    background-color: #dd0285;
+    color: #f5f5f5;
+    border: none;
+    padding: 6px;
+    border-radius: 4px;
+}
+#container > div > button+button{
+    background-color: #666666;
+    margin-left: 2px;
+
+}
+.directHome1:hover{
+    color: #dd0285;
+    cursor: pointer;
+}
+.directHome2:hover{
+    color: #dd0285;
+    cursor: pointer;
+}

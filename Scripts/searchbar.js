@@ -70,12 +70,7 @@ document.getElementById("magic").addEventListener("click",() =>{
     let data = JSON.parse(localStorage.getItem("cartData"))
     displayCart(data);
   console.log(data);
-    //  document.getElementById("image").src =  data[data.length-1].api_featured_image;
-    //  document.getElementById("product_title").innerText = data[data.length-1].name; 
-    //  document.getElementById("pric").innerText = `₹ ${data[data.length-1].price}`;
-    //  document.getElementById("cart").innerText =null;
-    //  document.getElementById("cart").innerText = `My cart - ₹ ${data[data.length-1].price}`;
-     document.getElementById("cart-popup").style.visibility="visible";
+  document.getElementById("cart-popup").style.visibility="visible";
  
 });
 

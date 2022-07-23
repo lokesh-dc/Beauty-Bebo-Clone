@@ -18,79 +18,72 @@
   <div id="main">
     <div id="items">
 
-      <div id="line-1">
-       
-        <main>
-          <table>
-            <thead>
-              <tr>
-                <th>ITEM</th>
-                <th>PRICE</th>
-                <th>QTY</th>
-                <th>SUBTOTAL</th>
-              </tr>
-            </thead>
-            <tbody id="shopitems">
+     <div id="scroll">
 
-            </tbody>
-          </table>
-        </main>
+      <!-- TABLE -->
+      <main >
+        <table>
+          <thead>
+            <tr>
+              <th>ITEM</th>
+              <th>PRICE... </th>
+              <th>QTY</th>
+              <th>SUBTOTAL</th>
+            </tr>
+          </thead>
+          <tbody id="shopitems">
 
-   
-    <div id="btn"><button>Edit</button><button>Remove Item</button></div>
-    
+          </tbody>
+        </table>
+      </main>
+
+
+      <!-- <div id="btn"><button>Remove Item</button></div> -->
+
+     </div>
+
+      
 
       <div id="bottom">
-        <div > <a href="./searchbar.html"> <button class="key"  >CONTINUE SHOPPING</button>
-          <button class="key">UPDATE SHOPPING CART</button></a></div>
+        <div> <a href="./searchbar.html"> <button class="key">CONTINUE SHOPPING</button>
+            <button class="key">UPDATE SHOPPING CART</button></a></div>
       </div>
-    </div>
-    </div>
-  </div>
-    
-
-
    
-</body >
-</html >
+    </div>
 
+    <!-- SUMMARY -->
+      
+   
+    <div id="summary">
+      <h2>SUMMARY</h1>
+      <div> <select name="" id="">
+        <option value="">ESTIMATE SHIPPING AND TAX</option>
+        <option value="India">Country</option>
+        <option value="Please select a region , state or province">State</option>
+        <option value="">Zip / Postal Code</option>
+      </select> </div>
+      <div> Subtotal  <span id="price_1">₹796.00</span>  <hr></div>
 
-<script>
-        
-let data = JSON.parse(localStorage.getItem("cartData"))
+      <div>Shipping (Best Way-Max Business days) ₹0.00 <hr></div>
+      <div >Order Total Incl.GST  <span id="subtotal">₹796.00 </span> <hr></div>
+      <div><select name="" id="">
+        <option value="">APPLY DISCOUNT CODE</option>
+        <option value="">Enter discount code</option>
+        <option value="">
+      </select> <hr></div>
 
-data.forEach(function(ele , index){
-  let tr = document.createElement("tr");
-
-let td1 = document.createElement("td");
-
-let img = document.createElement("img");
-img.src = ele.api_featured_image;
-td1.append(img);
-
-let td2 = document.createElement("td");
-td2.innerText = ele.name;
-
-
-let td3 = document.createElement("td");
-td3.innerText = `₹ ${Math.floor(ele.price * 79)}`;
-  
-tr.append( td1 , td2 , td3  );
-document.querySelector("tbody").append(tr);
- 
-  });
-
-
-
-  </script>
-
-       
-       
-        
-     
+      <button id="switch">PROCEED TO CHECKOUT</button>
+    </div>
+  </div>  
+   
+  </div>
 
 
 
 
+</body>
+
+</html>
 
 
+<script src="./Scripts/shopping.js" type="module">  </script>

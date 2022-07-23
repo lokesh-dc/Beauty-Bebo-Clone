@@ -59,3 +59,7 @@ document.getElementById("logoDiv").addEventListener("click",function(){
     alert("Option not available Login Manually")
 })
 
+
+document.getElementById("brandspage").addEventListener("click",function(){
+    window.location.href = "./brands.html"
+})

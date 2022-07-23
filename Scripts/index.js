@@ -64,3 +64,6 @@ document.getElementById("btn-1").addEventListener("click",()=>{
    })
 
 
+   document.getElementById("brandspage").addEventListener("click",function(){
+    window.location.href = "./brands.html"
+})

@@ -58,31 +58,22 @@
     cursor: pointer;;
 }
 
-#twoDiv{
-    display: flex;
-    /* border: 2px solid; */
-    gap: 30px;
-    width: 80%;
-    margin-top: 40px;
-    margin-bottom: 10px;
-}
-#twoDiv > div:first-child{
-    width: 25%;
-    padding: 10px;
 
-}
-#twoDiv > div:nth-child(2){
-    width: 75%;
-}
+
 #container{
     border: 1px solid #ebebeb;
     /* color: #666666; */
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: auto;
-    /* justify-content: center; */
-    /* align-items: center; */
     text-align: center;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 30px;
+}
+#namebrand{
+    width: 80%;
+    margin: auto;
 }
 
 #container > div{

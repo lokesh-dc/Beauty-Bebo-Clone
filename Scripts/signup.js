@@ -59,3 +59,7 @@ document.getElementById("but").addEventListener("click",submit)
 document.getElementById("logoDiv").addEventListener("click",function(){
     alert("Option not available create Account Manually")
 })
+
+document.getElementById("brandspage").addEventListener("click",function(){
+    window.location.href = "./brands.html"
+})

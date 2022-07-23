@@ -139,3 +139,9 @@ selectTag.addEventListener('change', (event) => {
 
 // let search = document.getElementById("search")
 // search.addEventListener("click", searchfun)
+
+
+document.getElementById("brandspage").addEventListener("click",function(){
+    window.location.href = "./brands.html"
+})
+

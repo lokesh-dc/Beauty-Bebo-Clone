@@ -7,11 +7,12 @@ let getdata = async (query,container,limit,brand) =>{
     let res = await fetch(url);
     let data = await res.json();
     append(data, container, limit);
-    console.log("getData")
     return data;
 }
 
 let append = (data,container,limit) => {
+    if(limit===undefined)
+        limit = 200;
     if(data.length===0)
         return;
     let appendingDiv = document.getElementById(container);
@@ -26,9 +27,10 @@ let append = (data,container,limit) => {
         div.setAttribute("class", "product");
 
         let detailsDiv = document.createElement("div");
+        let imgDiv = document.createElement("div");
         let img = document.createElement("img");
         img.src = el.image_link;
-
+        imgDiv.append(img);
         let title = document.createElement("p");
         title.innerText = el.name;
 
@@ -50,7 +52,7 @@ let append = (data,container,limit) => {
         //calculate old price based on discount;
         let old = Math.floor((+el.price * 79) / 100) * discount + n
         let discountonProduct = document.createElement("p");
-        discountonProduct.innerText = `${discount} %`
+        discountonProduct.innerText = `${discount} % off`
         let oldPrice = document.createElement("p");
 
         oldPrice.innerText = `₹ ${old}`;
@@ -60,7 +62,7 @@ let append = (data,container,limit) => {
         priceDiv.append(oldPrice,price,discountonProduct)
 
 
-        detailsDiv.append(img, title, rating, priceDiv);
+        detailsDiv.append(imgDiv, title, rating, priceDiv);
         detailsDiv.onclick = () => {
             product(el);
         }
@@ -73,7 +75,7 @@ let append = (data,container,limit) => {
         };
 
         let addToWishlist = document.createElement("button");
-        addToWishlist.innerHTML = `<img src="./Images/heart-white.png">`;
+        addToWishlist.innerHTML = `<img src="./Images/wishlist-icon.png">`;
         addToWishlist.onclick = () => {
             wishlist(el)
         }
@@ -88,8 +90,10 @@ let append = (data,container,limit) => {
 
 let product = (data) => {
     localStorage.setItem("product", JSON.stringify(data))
-    // window.location.href = "product.html"
-    alert("div");
+    let recent = JSON.parse(localStorage.getItem("recentlyViewed")) || [];
+    recent.push(data);
+    localStorage.setItem("recentlyViewed",JSON.stringify(recent));
+    window.location.href = "./productPage.html"
 };
 
 let addtocart = (prod) => {
@@ -97,7 +101,7 @@ let addtocart = (prod) => {
     cartData.push(prod);
     localStorage.setItem("cartData", JSON.stringify(cartData));
     // window.location.href = "addtocart.html"
-    alert("add to cart");
+    alert("Product added to cart successfully !");
 };
 
 let wishlist = (prod) => {
@@ -105,8 +109,8 @@ let wishlist = (prod) => {
     wishlistData.push(prod);
     localStorage.setItem("wishlistData", JSON.stringify(wishlistData))
     // window.location.href = "wishlist.html"
-    alert("wishlist");
+    alert("Product added to wishlist successfully !");
 };
 
 
-export default getdata;
+export {getdata,append};

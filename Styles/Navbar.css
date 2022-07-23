@@ -39,14 +39,17 @@
 
 /* Search & Logo section in  navbar  */
 #search-section{
-    padding: 10px 10%;
+    height: 90px;
 }
 #search-section>div:nth-child(2){
     display: grid;
     grid-template-columns: 4fr 5fr 1fr;
     height:50px;
-    width: 800px;
     flex-wrap: wrap;   
+}
+#wishlist:hover,
+#account:hover{
+    background-color: pink ;
 }
 input,select{
     border: 1px solid rgba(128, 128, 128, 0.075);
@@ -58,18 +61,20 @@ select{
 }
 #search-section>div>button{
     border: none;
-    background-color: var(--pink) ;
     padding: 5%;
+    background-color: var(--pink);
 
 }
 #search-section>div img{
     width: 20px;
-    height: 20px ;
+    height: 20px;
 }
 #search-section>div:nth-child(3){
     display: flex;
     gap:20px;
     align-items: center;
+    padding: 10px;
+    border: 1px solid red;
 }
 #wishlist{
     border: 1px solid black;

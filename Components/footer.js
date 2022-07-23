@@ -15,9 +15,9 @@ let footer = () => {
     <div>
         <h2>QUICK LINKS</h2>
         <ul>
-        <li><a href="#">About us</a></li>  
-        <li><a href="#">Contact us</a></li>
-        <li><a href="#">Terms & Conditions</a></li>
+        <li><a href="./aboutus.html">About us</a></li>  
+        <li><a href="./contact.html">Contact us</a></li>
+        <li><a href="./terms.html">Terms & Conditions</a></li>
         <li><a href="#">Privacy Policy</a></li>
         <li><a href="#">Return & Refund Policy</a></li>
         <li><a href="#">Shipping Policy</a></li>

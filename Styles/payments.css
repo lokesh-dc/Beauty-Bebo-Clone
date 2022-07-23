@@ -1,0 +1,39 @@
+/* importing fonts  */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;900&display=swap');
+
+*{
+    margin:0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+}
+
+body>h2{
+    font-size: 3em;
+    text-align: center;
+}
+body>div{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 50px;
+    width: 400px;
+    margin: auto;
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+}
+body>div:last-child{
+    box-shadow: none;
+}
+input{
+    height: 30px;
+    padding: 2px 10px; 
+}
+button{
+    background-color: black;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 0.4rem 1rem;
+    height: 40px;
+}

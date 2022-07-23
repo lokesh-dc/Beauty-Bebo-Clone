@@ -29,6 +29,9 @@
 #footer>div:first-child>div:first-child{
     position: relative;
 }
+#footer>div:first-child>div:first-child>p{
+    text-align: left;
+}
 
 #footer>div:first-child h2{
     color: white;

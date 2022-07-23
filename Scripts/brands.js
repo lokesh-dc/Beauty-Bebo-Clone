@@ -15,3 +15,8 @@ document.getElementById("brandsButton").addEventListener("click",(e)=>{
     localStorage.setItem("brandName",JSON.stringify(name))
     window.location.href = "./brand.html"
 })
+
+
+document.getElementById("brandspage").addEventListener("click",function(){
+    window.location.href = "./brands.html"
+})

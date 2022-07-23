@@ -118,3 +118,14 @@ let wishlist = (data) => {
     // window.location.href = "wishlist.html"
 };
 // document.getElementById("search").addEventListener("click", searchfun)
+
+
+document.getElementById("brandspage").addEventListener("click",function(){
+    window.location.href = "./brands.html"
+})
+
+document.getElementById("directHome").addEventListener("click",function(){
+    window.location.href = "./index.html"
+})
+
+

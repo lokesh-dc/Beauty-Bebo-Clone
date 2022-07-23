@@ -41,7 +41,7 @@ let navbar = () => {
             <h3>mom & baby care</h3>
             <h3>fragrance</h3>
             <h3>ayurveda</h3>
-            <h3>brands</h3>
+            <h3 id = "brandspage">brands</h3>
             <div id="magic" >
                 <img src="./Images/shopping-bag.png" alt="">
                 <h3 id="cart" >My cart - ₹0.00</h3>

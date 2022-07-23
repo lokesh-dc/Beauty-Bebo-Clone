@@ -14,3 +14,8 @@ function fetchdata(){
     name.innerText = userdata.name
     email.innerHTML = userdata.username
 }
+
+
+document.getElementById("brandspage").addEventListener("click",function(){
+    window.location.href = "./brands.html"
+})

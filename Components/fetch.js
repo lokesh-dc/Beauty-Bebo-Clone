@@ -7,6 +7,7 @@ let getdata = async (query,container,limit,brand) =>{
     let res = await fetch(url);
     let data = await res.json();
     append(data, container, limit);
+    console.log("getData")
     return data;
 }
 
@@ -109,4 +110,3 @@ let wishlist = (prod) => {
 
 
 export default getdata;
-

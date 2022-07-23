@@ -1,8 +1,9 @@
+
 import navbar  from "../Components/navbar.js";
 import getdata from "../components/fetch.js"
 
 
-// navbar section
+
 document.getElementById("navbar").innerHTML = navbar();
 
 // on seartching redirect to search page and append products data

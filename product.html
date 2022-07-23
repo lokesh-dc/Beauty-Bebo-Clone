@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/4b05f16ef9.js" crossorigin="anonymous"></script>
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         #container {
+            width:100%;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            
+         }
+    #container>div:nth-child(1) {
+    width:50%;
+    height: auto;
+    gap: -45px;
+    background-color: white;
+    
+}
+
+
+#container>div:nth-child(2) {
+    width: 55%;
+    height: auto;
+    gap: -45px;
+    background-color: white;
+}
+
+#image {
+    margin-right: 25px;
+}
+#weight {
+    color: #222222;
+}
+
+#in_stock {
+    margin-top: 25px;
+    display: flex;
+}
+
+#in_stock>div {
+    width: 10px;
+    height: 10px;
+    margin-right: 10px;
+    /* border: 1px solid; */
+}
+
+#in_stock>div>img {
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid; */
+}
+
+#in_stock>span {
+    color: #dd0285;
+    font-family: initial;
+}
+
+.stock {
+    width: 50%;
+
+    margin-top: 25px;
+    font-size: 10px;
+    display: block;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* border: 1px solid ; */
+}
+
+.stock>strong {
+    width: 6%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.stock>h3 {
+    width: 80%;
+    /* border: 1px solid ; */
+    margin-left: 15px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: #dd0285;
+    font-weight: 450;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.star {
+    color: #eca330;
+}
+
+.checked_black {
+    color: #aaa;
+}
+
+#id_box {
+    width: auto;
+    display: flex;
+    margin-top: 25px;
+    gap: 10px;
+}
+
+#id_box>div {
+    color: #999999;
+
+}
+#id_box {
+    width: auto;
+    display: flex;
+    margin-top: 25px;
+    gap: 10px;
+}
+
+#id_box>div {
+    color: #999999;
+}
+
+.price-box {
+    width: 27%;
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid; */
+}
+
+.price-box+p {
+    font-size: 12px;
+    color: #666666;
+}
+
+#old_price {
+    color: #999999;
+    font-weight: bold;
+}
+
+#new_price {
+    color: #dd0285;
+    font-weight: bold;
+}
+
+#discount {
+    color: #008000;
+    font-weight: bold;
+}
+
+#brand_box {
+    width: 30%;
+    display: flex;
+    gap: 5px;
+    margin-top: 25px;
+}
+
+#brand_box>span {
+    color: #666666;
+}
+
+#brandA {
+    color: #222222;
+}
+
+#brand:hover {
+    color: #dd0285;
+}
+
+.checked{
+            color:orange;
+         }
+
+
+         .counter {
+    width: 150px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 0px;
+}
+.counter input {
+    width: 50px;
+    border: 0;
+    line-height: 30px;
+    font-size: 20px;
+    text-align: center;
+    background:black;
+    color: #fff;
+    appearance: none;
+    outline: 0;
+    
+}
+.counter span {
+    display: block;
+    font-size: 25px;
+    padding: 0 10px;
+    cursor: pointer;
+    color:grey;
+    user-select: none;
+
+}
+.counter span h6{
+    color: white;
+    font-family: arial;
+    font-weight: 300;
+}
+.counter button {
+    padding: 20px;
+    background-color: #dd0285;
+    font-weight: bold;
+    border: 0px solid;
+    border-radius: 10px;
+    margin-right: -10px;
+    margin-left: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+
+    }
+.counter div {
+    margin-right: 5px;
+    width: 15%;
+}
+
+
+.counter div img {
+    width: 100%;
+}
+
+.counter button:hover {
+    background-color: #ea37a2;
+}
+#wishlist {
+    padding: 20px;
+    width: 80px;
+    height: 10px;
+    font-size: 14px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: #666666;
+    border: 1px solid;
+    border-radius: 4px;
+    margin-right: 200px;
+}
+
+#wishlist:hover {
+    color: white;
+    background-color: #dd0285;
+}
+#check_address {
+    width: 55%;
+    height: 85px;
+    margin-top: 25px;
+    padding-top: 12px;
+    border: 1px solid;
+    gap: 0px;
+    background-color: #f1f1f1;
+    padding-left: 10px;
+    border: 1px solid gainsboro
+}
+
+#check_address>p {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: black;
+    font-weight: 600;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+#check_address>input {
+    width: 75%;
+    height: 35px;
+    margin-right: -5px;
+    color: gainsboro;
+    /* border: 1px solid; */
+}
+
+#address {
+    padding-left: 10px;
+    width: 25px;
+    border: 1px solid gainsboro;
+    color: #dd0285;
+}
+
+
+
+#check {
+    padding: 8px 17px;
+    background-color: black;
+    color: white;
+    border: 0px solid;
+
+}
+
+#check:hover {
+    background-color: #dd0285;
+
+}
+
+#policy {
+    width: 95%;
+    height: 50px;
+    /* border: 1px solid; */
+    display: flex;
+    gap: 5px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+#policy>div {
+    width: 50%;
+    height: 50px;
+    /* border: 1px solid; */
+    gap: 10px;
+    padding-right: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f1f1f1;
+    border: 1px solid gainsboro;
+}
+
+#policy>div>p {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#policy>div:nth-child(2) {
+    padding-left: 5px;
+}
+
+#policy>div>img {
+    width: 40px;
+    height: 40px;
+    /* margin-left:-5px; */
+    /* border: 1px solid; */
+}
+
+#policy>div>img {
+    width: 35px;
+    height: 35px;
+    /* border: 1px solid; */
+}
+
+#Detail {
+    width: 80%;
+    height: auto;
+    
+    background-color: white;
+    margin: auto;
+    margin-top: 10%;
+    margin-bottom: 40px;
+    padding: 20px 5px 20px 50px;
+    margin-bottom: 5%;
+}
+#container1 {
+    height: 45px;
+    width: 95%;
+    border: 1px solid #aaa;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    background-color: #fafafa;
+    padding: 10px 10px 5px;
+    ;
+}
+
+#containe1>p {
+    font-weight: 700;
+}
+
+#container1>button {
+    width: 40px;
+    border: none;
+}
+
+.list {
+    height: 0px;
+    overflow: hidden;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #666666;
+
+}
+
+.links {
+    height: 300px;
+}
+
+.links select {
+    border: 1px solid #666666;
+    width: 100%;
+    height: 50px;
+    margin-bottom: 20px;
+    font-size: 17px;
+
+}
+
+.links>input {
+    border: 1px solid #666666;
+    width: 98%;
+    height: 50px;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+
+
+#Container {
+    height: 45px;
+    width: 95%;
+    border: 1px solid black;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    background-color: #fafafa;
+    padding: 10px 10px 5px;
+    ;
+}
+
+#Container>p {
+    font-weight: 700;
+}
+
+#Container>button {
+    width: 40px;
+    border: none;
+}
+
+
+
+
+
+         
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="image">
+        <image src="https://www.beautybebo.com/pub/media/catalog/product/cache/9afc37bdf46fae888adf23d57cf627ad/s/8/s8.jpg">
+
+        </image> </div>
+        <div id="info">
+            <div>
+                <h3 id="title_box">
+                    <span id="title">Calvin Klein Eternity For Men Eau De Parfum </span>
+                </h3>
+                       <span class="weight">(50ml)</span>
+                       <div class="rating" title="review">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span> </div>
+                        <div id="in_stock">
+                            <div><img
+                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLGqVzK-FgzePdaWYNsSkbPBvzkGDQqlXK-w&usqp=CAU"
+                                    alt=""></div><span>In stock</span>
+                        </div>
+                        <div id="id_box">
+                            <span id="SKU">SKU</span>
+                            <div id="id">BBJ0002902</div>
+                        </div>
+                        <div class="price-box price-final_price">
+
+                            <strike id="old_price">₹3650.00</strike>
+                            <span id="new_price">₹3468.00</span>
+                            <span>
+                                <b id="discount">5% off</b>
+                            </span>
+                        </div>
+                        <p>(Inclusive of all taxes)</p>
+                        <div id="brand_box">
+                            <span>Brand: Calvin Klein</span>
+                            <p id="brandA"></p>
+                        </div>
+                            <div class="counter">
+                                <p>Qty:</p>
+                                <span class="down" onClick='decreaseCount(event, this)'>∧ </span>
+                                <input type="text" value="1">
+                                <span class="up" onClick='increaseCount(event, this)'> ∨</span>
+                                <button id="DTC">
+                                    <div ><img src="./cart-38-24.png" alt=""></div><span id="ADDTOACART"> 
+                                        <h6 class="head">Add To Cart</h6></span>
+                                </button>
+                                
+                                <a href="" id="wishlist"><i class="fa-solid fa-heart"></i></a>
+                                
+                              </div>
+                              <div id="check_address">
+                                <p>Check Delivery</p>
+                                <input type="text" id="address" placeholder="Zipcode"></input>
+                                <button id="check">Check</button>
+                            </div>
+                            <div id="policy">
+                                <div>
+                                    <img src="https://www.beautybebo.com/pub/media/wysiwyg/genuine_product.png" alt="">
+                                    <p>100% GENUINE PRODUCT</p>
+                                </div>
+                                <div>
+                                    <img src="https://www.beautybebo.com/pub/media/wysiwyg/return_product.png" alt="">
+                                    <p>EASY RETURN POLICY</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="Detail">
+                    <div id="container1">
+                        <p>Detail</p>
+                        <button id="click">
+                            <h1 id="plus">+</h1>
+                        </button>
+                    </div>
+                        
+            
+                            </div>
+                        </div>
+                    </div>
+            
+        
+        
+                        
+                        
+                        
+
+            </div>
+
+
+                        
+                
+            
+
+        </div>
+    </div>
+
+</body>
+</html>
+<script>
+    function increaseCount(a, b) {
+  var input = b.previousElementSibling;
+  var value = parseInt(input.value, 10);
+  value = isNaN(value) ? 0 : value;
+  value++;
+  input.value = value;
+}
+
+function decreaseCount(a, b) {
+  var input = b.nextElementSibling;
+  var value = parseInt(input.value, 10);
+  if (value > 1) {
+    value = isNaN(value) ? 0 : value;
+    value--;
+    input.value = value;
+  }
+}
+
+</script>

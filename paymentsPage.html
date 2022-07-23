@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beuty Bebo</title>
+    <link rel="icon" type="image/x-icon" href="./Images/logo.png">
+    <link rel="stylesheet" href="./Styles/Navbar.css">
+    <link rel="stylesheet" href="./Styles/popup.css">
+    <link rel="stylesheet" href="./Styles/footer.css">
+    <link rel="stylesheet" href="./Styles/form.css">
+</head>
+<body>
+    <div id="navbar"></div>
+    <div id="container">
+        <form>
+            <h2>Shipping Address</h2>
+            <hr>
+            <label>First Name</label>
+            <input type="text" id="firstname" placeholder="Enter you first name.">
+            <label>Last Name</label>
+            <input type="text" id="lastname" placeholder="Enter you llast name.">
+            <label>Street Address</label>
+            <input type="text" id="street">
+            <label>City</label>
+            <input type="text" id="city">
+            <label>State</label>
+            <select id="state">
+                <option value="">Select your state here</option>
+                <option value="MH">Maharashtra</option>
+                <option value="MP">Madhya Pradesh</option>
+                <option value="AP">Andhra Pradesh</option>
+            </select>
+            <label>Zip/Postal Code</label>
+            <input type="text" id="zip">
+            <label>Country</label>
+            <select id="country">
+                <option value="IN">India</option>
+            </select>
+            <label>Phone Number</label>
+            <input type="text" id="mob">
+            <h2>Delivery Chares</h2>
+            <hr>
+            <div>
+                <input type="radio" checked> 
+                <label for="radio">0.00</label> 
+                <label >Max 7 Bussiness days</label>
+            </div>
+        </form>
+        <div>
+            <h2>ORDER SUMMARY</h2>
+            <table id="cartInfo" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th colspan="2">ITEM</th>
+                        <th>PRICE</th>
+                        <th>QUANTITY</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div id="footer"></div>
+</body>
+<script src="./Scripts/paymentsPage.js" type="module"></script>
+</html>

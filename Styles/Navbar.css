@@ -39,7 +39,7 @@
 
 /* Search & Logo section in  navbar  */
 #search-section{
-    padding: 10px 10%;
+    padding: 10px 5%;
 }
 #search-section>div:nth-child(2){
     display: grid;

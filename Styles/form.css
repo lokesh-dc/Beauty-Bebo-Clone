@@ -1,0 +1,63 @@
+#container{
+    width: 80%;
+    margin: auto;
+    padding:50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:30px;
+}
+/* #container>:nth-child(2){
+    background-color: rgba(128, 128, 128, 0.363);
+} */
+#container>form{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    font-size: 1.2rem;
+}
+
+#container input,
+#container select{
+    height: 30px;
+    border: 1px solid black;
+}
+
+#container>form>div{
+    display: flex;
+    gap:50px;
+    color: grey;
+}
+
+#cartInfo{
+    margin-top: 50px;
+    width: 100%;
+    text-align: center;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+table>thead{
+    background-color: rgba(128, 128, 128, 0.247);
+    height:60px;
+}
+table>tbody>tr{
+    height: 80px;
+}
+#cartInfo img{
+    width: 50px;
+}
+
+#cartInfo td{
+    width: 25%;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.39);
+}
+#cartInfo td:nth-child(1){
+    width: 120px;
+}
+
+#cartInfo tbody>tr:last-child{
+    color: red;
+    font-weight: 500;
+}
+.title{
+    width: 20%;
+    text-align: left;
+}

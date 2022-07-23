@@ -18,9 +18,13 @@ let searchfun = async () => {
 
 }
 
-let getData = async (query) => {
-    let url = `https://makeup-api.herokuapp.com/api/v1/products.json?brand=covergirl&product_type=${query}`
+window.addEventListener("load",()=>{
+    let query = localStorage.getItem("query");
+    getData(query);
+})
 
+let getData = async (query) => {
+    let url = `https://makeup-api.herokuapp.com/api/v1/products.json?product_type=${query}`
     let res = await fetch(url);
     data = await res.json()
     append(data)

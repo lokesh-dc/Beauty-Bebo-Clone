@@ -1,0 +1,43 @@
+#container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 30px;
+    width: 70%;
+    margin: auto;
+    padding: 50px;
+    text-align: justify;
+}
+#container>div{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+#container>div:first-child{
+    line-height: 2rem;
+    color:grey;
+
+}
+#container input{
+    height: 40px;
+    border: 1px solid rgb(37, 37, 37);
+}
+button{
+    background-color: rgba(0, 0, 0, 0.658);
+    border: none;
+    width: fit-content;
+    padding: 0.4rem 1rem;
+    color: white;
+}
+#container h2{
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: black;
+}
+#container a{
+    text-decoration: none;
+    color: currentColor;
+}
+#container a:hover{
+    color: pink;
+}

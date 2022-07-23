@@ -7,7 +7,7 @@
 }
 
 #container>div {
-
+    border: 1px solid red;
     text-align: center;
     padding: 10px 10px;
     /* border: 1px solid black; */
@@ -15,6 +15,11 @@
 
 }
 
+#container img{
+    width: 50%;
+    min-width:50%;
+    min-height: 200px;
+}
 #container>div>img+p {
     font-family: Roboto;
 }
@@ -42,7 +47,6 @@ button {
     margin-right: 5px;
     cursor: pointer;
 }
-
 #filter ul {
     list-style: none;
 }

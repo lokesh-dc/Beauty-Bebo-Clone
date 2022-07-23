@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beauty Bebo</title>
+    <link rel="stylesheet" href="./Styles/Navbar.css">
+    <link rel="stylesheet" href="./Styles/popup.css">
+    <link rel="stylesheet" href="./Styles/footer.css">
+    <link rel="stylesheet" href="./Styles/index.css">
+    <link rel="stylesheet" href="./Styles/productPage.css">
+</head>
+<body>
+    <div id="navbar"></div>
+
+    <div id="container">
+        
+    </div>
+    <div id="desc">
+
+    </div>
+    <h2>RECENT PRODUCTS</h2>
+    <div id="recent">
+
+    </div>
+    <div id="footer"></div>
+</body>
+
+<script type="module">
+    import navbar from "../components/navbar.js";
+    import {append} from "../components/fetch.js";
+    import footer from "../components/footer.js"
+
+    document.getElementById("navbar").innerHTML = navbar()
+    document.getElementById("footer").innerHTML = footer()
+
+
+    window.addEventListener("load",()=>{
+        let elem = JSON.parse(localStorage.getItem("product"));
+        console.log(elem);
+        let product = [];
+        product.push(elem);
+        append(product,"container");
+
+        let desc = document.createElement("p");
+        desc.innerHTML = `<b> DESCRIPTION :</b> <br> ${elem.description}`;
+        document.getElementById('desc').append(desc)
+        
+        let recent =  JSON.parse(localStorage.getItem("recentlyViewed"));
+        append(recent,"recent")
+    })
+
+
+</script>
+</html>

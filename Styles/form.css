@@ -12,19 +12,36 @@
 #container>form{
     display: flex;
     flex-direction: column;
-    gap:20px;
+    gap:10px;
     font-size: 1.2rem;
+}
+#container>div:nth-child(2){
+    position: relative;
+}
+#container button{
+    padding: 0.5rem 1rem;
+    background-color: black;
+    color: white;
+    position: absolute;
+    bottom: auto;
+    right: 0;
 }
 
 #container input,
 #container select{
     height: 30px;
-    border: 1px solid black;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0.233);
+}
+
+label{
+    margin-top: 10px;
 }
 
 #container>form>div{
     display: flex;
-    gap:50px;
+    align-items: center;
+    gap: 50px;
     color: grey;
 }
 
@@ -54,8 +71,10 @@ table>tbody>tr{
 }
 
 #cartInfo tbody>tr:last-child{
-    color: red;
     font-weight: 500;
+    font-size: 1.2rem;
+    height: 60px;
+    background-color: rgba(128, 128, 128, 0.068);
 }
 .title{
     width: 20%;

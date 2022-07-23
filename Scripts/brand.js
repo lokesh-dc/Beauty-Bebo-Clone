@@ -1,37 +1,48 @@
 import navbar from "../Components/navbar.js"
+import footer from "../Components/footer.js"
+document.getElementById("navbar").innerHTML = navbar()
+document.getElementById("footer").innerHTML = footer()
 
 
-document.getElementById("navbar").innerHTML = navbar();
+let brandName = JSON.parse(localStorage.getItem("brandName"))
+// console.log(brandName)
 
+brandNameSet(brandName)
+function brandNameSet(brandName){
+    let bName = document.getElementById("brandName")
+    let bName1 = document.getElementById("brandName1")
 
-
-
-let container = document.querySelector("#container");
-
-// let temp;
-
-
-let data
-let searchfun = async () => {
-    let query = document.querySelector("#query").value;
-    getData(query)
-
+    bName.innerText = brandName
+    bName1.innerText = brandName
 }
 
-let getData = async (query) => {
-    let url = `https://makeup-api.herokuapp.com/api/v1/products.json?brand=covergirl&product_type=${query}`
 
-    let res = await fetch(url);
-    data = await res.json()
+let brand = async(brandName)=>{
+    const url = `http://makeup-api.herokuapp.com/api/v1/products.json?brand=${brandName}`
+    let res = await fetch(url)
+    let data = await res.json()
+    // console.log(data.name,data.image_link)
     append(data)
-    console.log(data);
-
-
-
-
 }
+brand(brandName)
 
 
+
+
+// function append(data){
+//     data.forEach((elem)=>{
+//         let container = document.getElementById("append")
+//         let div = document.createElement("div")
+//         let image = document.createElement("img")
+//         image.src = elem.image_link
+//         let name = document.createElement("p")
+//         name.innerText = elem.name
+//         let price = document.createElement("p")
+//         price.innerText = elem.price*79
+//         let btn = document.
+//     })
+    
+// }
 
 function append(data) {
     let container = document.querySelector("#container");
@@ -80,7 +91,16 @@ function append(data) {
         div.append(img, p, price, rating, btn, btn2);
         document.querySelector("#container").append(div)
     })
-};
+}
+
+
+document.querySelector(".directHome1").addEventListener("click",function(){
+    window.location.href = "./brands.html"
+})
+document.querySelector(".directHome2").addEventListener("click",function(){
+    window.location.href = "./brands.html"
+})
+
 
 let product = (data) => {
     localStorage.setItem("product", JSON.stringify(data))
@@ -90,52 +110,11 @@ let product = (data) => {
 let addtocart = (data) => {
     localStorage.setItem("addtocart", JSON.stringify(data))
     // window.location.href = "addtocart.html"
+    alert("product added")
 };
 
 let wishlist = (data) => {
     localStorage.setItem("wishlist", JSON.stringify(data))
     // window.location.href = "wishlist.html"
 };
-document.getElementById("search").addEventListener("click", searchfun)
-
-// window.addEventListener("load", () => {
-//     let query = localStorage.getItem("query");
-
-
-//     // temp.then((res) => {
-//     //     return res.json();
-//     // }).then((res) => {
-//     //     console.log(res);
-//     // })
-//     // console.log("temp", temp.json())
-// })
-
-
-
-// let searchfun = async () => {
-//     let query = document.querySelector("#query").value;
-
-//     data = await getdata(query, "container", 200)
-//     console.log(data)
-
-// }
-
-let selectTag = document.querySelector('#select')
-selectTag.addEventListener('change', (event) => {
-    let value = selectTag.value
-    if (value === "price:Low to High") {
-        let sortedData = data.sort((a, b) => {
-            return a.price - b.price
-        })
-        append(sortedData)
-    } else {
-        let sortedData = data.sort((a, b) => {
-            return b.price - a.price
-        })
-        append(sortedData)
-    }
-})
-
-
-// let search = document.getElementById("search")
-// search.addEventListener("click", searchfun)
+// document.getElementById("search").addEventListener("click", searchfun)

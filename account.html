@@ -4,11 +4,79 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+
+    <link rel="stylesheet" href="./Styles/Navbar.css">
+    <link rel="stylesheet" href="./Styles/footer.css">
+    <link rel="stylesheet" href="./Styles/account.css">
+    <link rel = "icon" href = "https://i.pinimg.com/280x280_RS/7d/8b/d5/7d8bd5f68f1e0da49fade19444fb734d.jpg" type = "image/x-icon">
+
+    <title>My Account Beauty Bebo</title>
     <link rel="stylesheet" href="./Styles/popup.css">
+
   </head>
   <body>
-   <h1>Registered</h1>
+   <!-- <h1>Registered</h1> -->
+   <div id="navbar"></div>
+   <div id="accMain">
+    <div id="accSidebar1">
+      <h2>My Account</h2>
+      <h3>My Orders</h3>
+      <h3 class="underline">My Wish List</h3>
+      <h3>Address Book</h3>
+      <h3 class="underline">Account Information</h3>
+      <h3>My Product Reviews</h3>
+      <h3>Newsletter Subscriptions</h3>
+    </div>
+    <div id="accacc">
+      <h1 class="myacc">MY ACCOUNT</h1>
+      <h3 class="info underline">ACCOUNT INFORMATION</h3>
+      <div class ="accBox">
+        <div class="dicspaces">
+          <h4>Contact Information</h4>
+          <p id="name"></p>
+          <p id="email"></p>
+          <div class="accbttn">
+            <button>Edit</button>
+            <button>Change Password</button>
+          </div>
+        </div>
+        <div class="dicspaces">
+          <h4>Newsletter</h4>
+          <p>You aren't subscribed to our newsletter.</p>
+          <div class="accbttn">
+            <button>Edit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="imgDil">
+      <img src="https://www.beautybebo.com/pub/media/free-delivery.jpg" alt="">
+    </div>
+    <div>
+      <div class="accBox underline">
+        <h2>ADDRESS BOOK</h2>
+        <p>Manage Addresses</p>
+      </div>
+      <div class="accBox">
+        <div class="dicspaces">
+          <h4>Default Billing Address</h4>
+          <p>You have not set a default billing address.</p>
+          <div class="accbttn">
+            <button>Edit Address</button>
+          </div>
+        </div>
+        <div class="dicspaces">
+          <h4>Default Shipping Address</h4>
+          <p>You have not set a default shipping address.</p>
+          <div class="accbttn">
+            <button>Edit Address</button>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+   </div>
+   <div id="footer"></div>
   </body>
 </html>
-<script></script>
+<script src="./Scripts/account.js" type="module"></script>

@@ -39,7 +39,7 @@ let footer = () => {
         <ul>
             <li><a href="#">Makeup</a></li>  
             <li><a href="#">Skins</a></li>
-            <li><a href="#">HAir</a></li>
+            <li><a href="#">Hair</a></li>
             <li><a href="#">Personal Care</a></li>
             <li><a href="#">Mom & Baby care</a></li>
             <li><a href="#">Ayurveda</a></li>
@@ -54,7 +54,7 @@ let footer = () => {
     <div>
         <h1>Signup For Newsletter</h1>
         <div id="newsletter">                
-            <input type="text" placeholder="Sign for Newsletetr">
+            <input type="text" placeholder="Sign for Newsletter">
             <button>Subscribe</button>
         </div>
     </div>`

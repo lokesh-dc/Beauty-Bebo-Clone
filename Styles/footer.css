@@ -1,7 +1,8 @@
 #footer{
-    background-color: black;
+    background-color: #232323;
     padding: 50px 10%;
     border-top: 2px solid var(--pink);
+    text-transform:capitalize;
 }
 
 #footer>div:first-child{

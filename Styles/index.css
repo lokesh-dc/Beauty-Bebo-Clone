@@ -42,7 +42,8 @@
     width: 1.5rem;
     padding-right: 10px;
 }
-#container img{
+#container>div>img,
+#slider{
     width: 100%;
 }
 #top-section li {
@@ -66,36 +67,45 @@
   }
 
 
-  #container>div:nth-child(3){
+  #container>div:nth-child(3),
+  #container>div:nth-child(7){
     gap:0;
     padding: 0;
     background-color: transparent;
     box-shadow: none;
+    row-gap: 10px;
   }
 
+#container>div:nth-child(7) h2,
 #container>div>p{
+    font-size: 1rem;
+    font-weight: 400;
     border-bottom: 2px solid var(--pink);
     width: fit-content;
     padding-bottom: 5px;
     letter-spacing: 1px;
+    text-transform: uppercase;
 }
-
-#arrivals{
+.productDiv{
     margin-top: 0;
     display: grid;
     grid-template-columns: repeat(5,1fr);
     text-align: center;
     border: 1px solid rgba(128, 128, 128, 0.295);
 }
-#arrivals>div{
-    border: 1px solid transparent;
+.productDiv>div{
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 2px solid transparent;
     border-right: 1px solid rgba(128, 128, 128, 0.212);
 }
-#arrivals>div:last-child{
+.productDiv>div:nth-child(5){
     border-right: none;
 }
 
-#arrivals>div:hover{
+.productDiv>div:hover{
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     border: 2px solid var(--pink);
 }
@@ -112,24 +122,24 @@
     color: green;
     font-weight: bold ;
 }
-#arrivals img{
-    width:50%;
+.productDiv img{
+    width:100px;
     display: block;
     margin: auto;
 }
 
-#arrivals>div>div{
+.productDiv>div>div{
     display: flex;
     gap:10px;
     justify-content: center;
     margin: 10px;
 }
-#arrivals>div>div:first-child{
+.productDiv>div>div:first-child{
     flex-direction: column;
 }
 
 
-#arrivals button{
+.productDiv button{
     border: none;
     padding: 0.2rem 1rem;
     border-radius: 5px;
@@ -140,12 +150,80 @@
 }
 
 
-#arrivals button:first-of-type{
-    background-color: var(--pink);
+.productDiv button>img{
+    width: 0.8rem;
 }
 
+.productDiv button:first-of-type{
+    background-color: var(--pink);
+    display: flex;
+    gap:0.5rem;
+    font-size: 1rem;
+    padding: 0.2rem 1rem ;
 
+}
 
 #container>div:nth-child(4){
-    grid-template-columns: repeat(7,1fr);
+    grid-template-columns: repeat(2,1fr);
+    box-shadow: none;
 }
+
+#container>div:nth-child(5){
+    padding: 0;
+    gap: 0;
+}
+
+#selection-div>div:first-child{
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    gap: 20px;
+    text-align: center;
+    border: 1px solid rgba(128, 128, 128, 0.507);
+}
+
+#selection-div>div:first-child>div{
+    padding:10px;
+}
+
+
+#selection-div>div>div>img{
+    width: 50px;
+    height: 50px;
+}
+.active,
+#selection-div>div:first-child>div:hover{
+    background-color: pink;
+    color: white;
+    cursor: pointer;
+}
+
+.non-active{
+    background-color: transparent;
+    color: black;
+}
+
+#container>div:nth-child(9){
+    box-shadow: none;
+    padding: 20px;
+}
+
+#container>div:nth-child(9)>p{
+    background-color: transparent;
+    box-shadow: none;
+    text-transform: lowercase;
+    text-align: justify;
+    line-height: 1.5rem;
+    border: none;
+    letter-spacing: 0;
+}
+#intro>b{
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+#container>div:nth-child(9)>h5{
+    color:var(--pink);
+    font-weight: 400;
+    cursor: pointer;
+}
+

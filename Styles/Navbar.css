@@ -12,7 +12,7 @@
 }
 #navbar{
     position: sticky;
-    top:-21%;
+    top: -190px;
     cursor: pointer;
     background-color: white;
     z-index: 1000;
@@ -21,7 +21,6 @@
     display:flex;
     justify-content: space-around;
     align-items: center;
-    
 }
 
 #advertisement-div{

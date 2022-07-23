@@ -20,7 +20,8 @@
        
        margin: auto;
        padding: 15px;
-       overflow-y: auto;
+       overflow-y: scroll;
+       overflow-y: hidden;
        margin: 5px;
    }
    #pic

@@ -155,13 +155,7 @@ select
     
    
 } 
-/* 
-th{
-    border: 1px solid;
-} */
-/* td{
-border: 1px solid red;
-} */
+
 .td1
 {
     display: flex;
@@ -177,6 +171,9 @@ border: 1px solid red;
     
     overflow:scroll ;
     margin: 5px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
  }
 
 
@@ -212,4 +209,17 @@ thead{
     width: 100%;
     margin: auto; 
     
+}
+
+h1{
+    /* border: 1px solid; */
+    padding: 10px;
+    font-size: 20px;
+    color: rgb(108, 104, 104);
+}
+h2{
+    /* border: 1px solid; */
+    padding: 13px;
+    font-size: 20px;
+    color: rgb(108, 104, 104);
 }

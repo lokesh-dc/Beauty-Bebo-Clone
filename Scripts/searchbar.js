@@ -143,6 +143,8 @@ selectTag.addEventListener('change', (event) => {
 })
 
 
+<<<<<<< HEAD
+=======
 let filtertag = document.querySelector('#pricefilter')
 console.log(filtertag)
 filtertag.addEventListener('change', (elem) => {
@@ -157,8 +159,12 @@ filtertag.addEventListener('change', (elem) => {
 
 
 
+>>>>>>> 79db894f907cd75d80b8cbd3e7a5ba29385cdd5f
 
 document.getElementById("brandspage").addEventListener("click",function(){
     window.location.href = "./brands.html"
 })
+<<<<<<< HEAD
+=======
 
+>>>>>>> 79db894f907cd75d80b8cbd3e7a5ba29385cdd5f

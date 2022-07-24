@@ -107,15 +107,20 @@ let product = (data) => {
     // window.location.href = "product.html"
 };
 
-let addtocart = (data) => {
-    localStorage.setItem("addtocart", JSON.stringify(data))
+let addtocart = (prod) => {
+    let cartData = JSON.parse(localStorage.getItem("cartData")) || [];
+    cartData.push(prod);
+    localStorage.setItem("cartData", JSON.stringify(cartData));
     // window.location.href = "addtocart.html"
-    alert("product added")
+    alert("add to cart");
 };
 
-let wishlist = (data) => {
-    localStorage.setItem("wishlist", JSON.stringify(data))
+let wishlist = (prod) => {
+    let wishlistData = JSON.parse(localStorage.getItem("wishlistData")) || [];
+    wishlistData.push(prod);
+    localStorage.setItem("wishlistData", JSON.stringify(wishlistData))
     // window.location.href = "wishlist.html"
+    alert("wishlist");
 };
 // document.getElementById("search").addEventListener("click", searchfun)
 

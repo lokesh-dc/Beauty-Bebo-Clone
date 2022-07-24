@@ -21,8 +21,14 @@
        margin: auto;
        padding: 15px;
        overflow-y: auto;
+      
        margin: 5px;
    }
+
+   #product::-webkit-scrollbar{
+    width: 0;
+    height: 0;
+}
    #pic
    {
        width: 28%;

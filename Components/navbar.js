@@ -52,13 +52,7 @@ let navbar = () => {
         <div id="cart-popup">
     
             <div id="product">
-              // <div id="pic">
-              //   <img id="image" src="./Images/payment.png" alt="">
-              // </div>
-              // <div id="price">
-              //   <div id="product_title">Wow Onion Care Combo</div>
-              //   <div>Qty:  <input id="box" type="text" inputmode="numeric"></div>
-              // </div>
+              
             </div>
       
             <div id="total">

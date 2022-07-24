@@ -25,11 +25,14 @@ window.addEventListener("load", () => {
     getData(query,200)
 })
 // On enter search products
+
 document.querySelector("#query").addEventListener("keyup",(event)=>{
     event.preventDefault();
-    getData(query,200)
+    if(event.key === "Enter"){
+        localStorage.setItem("query",query.value);
+        window.location.href = "searchbar.html";
+    }
 })
-
 
 let getData = async (query, limit) => {
     let url = `https://makeup-api.herokuapp.com/api/v1/products.json?brand=covergirl&product_type=${query}`

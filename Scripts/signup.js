@@ -46,7 +46,7 @@ console.log(registration.username)
     if(data.error===false){
         alert("Successfully Registerd")
         // alert(user)
-        window.location.href = "./account.html"
+        window.location.href = "./index.html"
     }else{
         alert("User Already Exists")
     }

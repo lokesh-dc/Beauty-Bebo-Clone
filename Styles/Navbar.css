@@ -74,7 +74,6 @@ select{
     gap:20px;
     align-items: center;
     padding: 10px;
-    border: 1px solid red;
 }
 #wishlist{
     border: 1px solid black;

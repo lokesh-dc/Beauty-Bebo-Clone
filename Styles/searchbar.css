@@ -4,17 +4,24 @@
     grid-template-rows: auto;
     width: 72%;
     height: auto;
+    margin-bottom: 50px;
 }
 
 #container>div {
-
+    border: 1px solid red;
     text-align: center;
     padding: 10px 10px;
-    /* border: 1px solid black; */
+    border: 0.5px solid gray;
+    border: 50%;
     font-family: Roboto;
 
 }
 
+#container img{
+    width: 50%;
+    min-width:50%;
+    min-height: 200px;
+}
 #container>div>img+p {
     font-family: Roboto;
 }
@@ -29,8 +36,8 @@
 
 #sidebar {
     width: 28%;
-    height: 500px;
-    border: 1px solid;
+    height: auto;
+    /* border: 1px solid; */
 }
 
 button {
@@ -43,29 +50,10 @@ button {
     cursor: pointer;
 }
 
-#filter ul {
-    list-style: none;
-}
 
-#filter ul li a {
-    text-decoration: none;
-    color: gray;
-}
 
-#brand,
-#price,
-#skintype {
-    display: none;
-}
 
-#filter ul li:hover {
-    background-color: rgb(85, 115, 141);
-}
 
-#filter ul li:hover #brand {
-    display: block;
-    position: absolute;
-}
 
 #select {
     margin-left: 33%;
@@ -73,26 +61,27 @@ button {
     padding: 5px 10px;
 }
 
-/* #filter {
-    position: relative;
-    display: inline-block;
+hr {
+    width: 80%;
 }
 
-#brandsort {
-    display: none;
-    position: absolute;
-    overflow: auto;
-    border: 1px solid gray;
-    z-index: 1;
+#brand {
+
+    margin-top: 20px;
+    padding: 5px 10px;
 }
 
-#brandsort>a {
-    color: gray;
-    padding: 5px 20px 5px 5px;
-    text-decoration: none;
+#pricefilter {
+    margin-top: 20px;
+
 }
 
-#brandsort>a:hover {
-    background-color: aliceblue;
-} */
+#productsfilter {
+    margin-top: 20px;
+    margin-bottom: 50px;
 
+}
+
+#productsfilter>option {
+    padding-right: 30px;
+}

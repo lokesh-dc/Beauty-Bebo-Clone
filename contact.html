@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact us</title>
+    <link rel="icon" type="image/x-icon" href="./Images/icons-Thumb/logo-title.png">
+    <link rel="stylesheet" href="./Styles/Navbar.css">
+    <link rel="stylesheet" href="./Styles/popup.css">
+    <link rel="stylesheet" href="./Styles/footer.css">
+    <link rel="stylesheet" href="./Styles/contact.css">
+</head>
+<body>
+    <div id="navbar">
+
+    </div>
+
+    <div id="container">
+        <div>
+            <h2>Contact Us</h2>
+            <p>Makeup has been around for over a hundred thousand years, and beauty is only evolving. What started with red pigment clay is now a fascinating world of foundation, rouge, lipstick, blush, mascara, eye shadow, eye liner, eye caramba! Meet Beautybebo, a powerful concoction of technology and beauty. A portal which delivers the best of both the worlds</p>
+            <a href="mailto:support@beautybebo.com">support@beautybebo.com</a>
+            <p>Hotline : +91 7877061041</p>
+            <p>Address: Moti nagar west, Vaishali nagar, Jaipur</p>
+        </div>
+        <div>
+            <h2>Send Your Comments</h2>
+            <input type="text" placeholder="Enter Your Name">
+            <input type="text" placeholder="Enter Your Email">
+            <input type="text" placeholder="Enter Your Mobile number">
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+
+            <button>SEND MESSAGE</button>
+        </div>
+    </div>
+
+    <div id="footer">
+
+    </div>
+</body>
+<script type="module">
+    
+    import navbar from "../components/navbar.js";
+    import footer from "../components/footer.js"
+
+    document.getElementById("navbar").innerHTML = navbar()
+    document.getElementById("footer").innerHTML = footer()
+</script>
+</html>

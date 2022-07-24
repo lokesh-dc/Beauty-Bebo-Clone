@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: content-box
 }
 
 #loginbox1{
@@ -133,6 +133,7 @@ span{
 #login > input{
     color: #666666;
     border: 1px solid #adadad;
+    width: 95%;
 }
 #login > label{
     color: #666666;

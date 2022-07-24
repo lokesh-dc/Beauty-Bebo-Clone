@@ -1,4 +1,7 @@
 import navbar from "../Components/navbar.js"
+import footer from "../Components/footer.js"
+
+document.getElementById("footer").innerHTML = footer();
 
 
 document.getElementById("navbar").innerHTML = navbar();
@@ -14,16 +17,20 @@ let container = document.querySelector("#container");
 let data
 let searchfun = async () => {
     let query = document.querySelector("#query").value;
-    getData(query)
+    getData(query, 200)
 
 }
 
-let getData = async (query) => {
-    let url = `https://makeup-api.herokuapp.com/api/v1/products.json?brand=covergirl&product_type=${query}`
 
+window.addEventListener("load",()=>{
+    let query = localStorage.getItem("query");
+    getData(query);
+})
+let getData = async (query,limit) => {
+    let url = `https://makeup-api.herokuapp.com/api/v1/products.json?brand=covergirl&product_type=${query}`
     let res = await fetch(url);
     data = await res.json()
-    append(data)
+    append(data, limit)
     console.log(data);
 
 
@@ -33,10 +40,14 @@ let getData = async (query) => {
 
 
 
-function append(data) {
+function append(data, limit) {
     let container = document.querySelector("#container");
     container.innerHTML = "";
-    data.forEach((el) => {
+    for (let i = 0; i < data.length; i++) {
+        if (i > limit)
+            break;
+
+        let el = data[i];
 
 
         let div = document.createElement("div");
@@ -79,7 +90,7 @@ function append(data) {
 
         div.append(img, p, price, rating, btn, btn2);
         document.querySelector("#container").append(div)
-    })
+    }
 };
 
 let product = (data) => {
@@ -87,38 +98,33 @@ let product = (data) => {
     // window.location.href = "product.html"
 };
 
-let addtocart = (data) => {
-    localStorage.setItem("addtocart", JSON.stringify(data))
+let addtocart = (prod) => {
+    let cartData = JSON.parse(localStorage.getItem("cartData")) || [];
+    cartData.push(prod);
+    localStorage.setItem("cartData", JSON.stringify(cartData));
     // window.location.href = "addtocart.html"
+    alert("add to cart");
 };
 
-let wishlist = (data) => {
-    localStorage.setItem("wishlist", JSON.stringify(data))
+let wishlist = (prod) => {
+    let wishlistData = JSON.parse(localStorage.getItem("wishlistData")) || [];
+    wishlistData.push(prod);
+    localStorage.setItem("wishlistData", JSON.stringify(wishlistData))
     // window.location.href = "wishlist.html"
+    alert("wishlist");
 };
 document.getElementById("search").addEventListener("click", searchfun)
 
-// window.addEventListener("load", () => {
-//     let query = localStorage.getItem("query");
-
-
-//     // temp.then((res) => {
-//     //     return res.json();
-//     // }).then((res) => {
-//     //     console.log(res);
-//     // })
-//     // console.log("temp", temp.json())
-// })
+window.addEventListener("load", () => {
+    let query = localStorage.getItem("query");
 
 
 
-// let searchfun = async () => {
-//     let query = document.querySelector("#query").value;
+})
 
-//     data = await getdata(query, "container", 200)
-//     console.log(data)
 
-// }
+
+
 
 let selectTag = document.querySelector('#select')
 selectTag.addEventListener('change', (event) => {
@@ -137,7 +143,28 @@ selectTag.addEventListener('change', (event) => {
 })
 
 
+<<<<<<< HEAD
+=======
+let filtertag = document.querySelector('#pricefilter')
+console.log(filtertag)
+filtertag.addEventListener('change', (elem) => {
+    let filtervalue = filtertag.value;
+    console.log(filtervalue)
+    let filterdata = data.filter((elem) => {
+        console.log(elem)
+        return elem.price >= filtervalue;
+    });
+    append(filterdata)
+})
+
+
+
+>>>>>>> 79db894f907cd75d80b8cbd3e7a5ba29385cdd5f
 
 document.getElementById("brandspage").addEventListener("click",function(){
     window.location.href = "./brands.html"
 })
+<<<<<<< HEAD
+=======
+
+>>>>>>> 79db894f907cd75d80b8cbd3e7a5ba29385cdd5f

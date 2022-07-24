@@ -143,10 +143,12 @@
     border: none;
     padding: 0.2rem 1rem;
     border-radius: 5px;
-    background-color: grey;
+    background-color: transparent;
     color: white;
     font-size: 0.9rem;
     cursor: pointer;
+    border: 1px solid pink
+
 }
 
 
@@ -176,7 +178,6 @@
 #selection-div>div:first-child{
     display: grid;
     grid-template-columns: repeat(7,1fr);
-    gap: 20px;
     text-align: center;
     border: 1px solid rgba(128, 128, 128, 0.507);
 }

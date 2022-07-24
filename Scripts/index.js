@@ -1,15 +1,35 @@
 
 import navbar  from "../Components/navbar.js";
-import getdata from "../components/fetch.js"
-
+import {getdata} from "../components/fetch.js"
+import footer from "../components/footer.js"
 
 
 document.getElementById("navbar").innerHTML = navbar();
 
+// footer section
+document.getElementById("footer").innerHTML = footer();
+
+document.getElementById('account').addEventListener("click",()=>{
+    window.location.href = "./login.html";
+})
+
+
 // on seartching redirect to search page and append products data
+let query = document.getElementById('query');
+// On enter search products
+document.querySelector("#query").addEventListener("keyup",(event)=>{
+    event.preventDefault();
+    if(event.key === "Enter"){
+        localStorage.setItem("query",query.value);
+        window.location.href = "searchbar.html";
+    }
+})
+
+// on button click search products
 document.getElementById("search").addEventListener("click",()=>{
-    let query = document.getElementById('query').value;
-    localStorage.setItem("query",query);
+    if(query.value==="")
+        return;
+    localStorage.setItem("query",query.value);
     window.location.href = "searchbar.html";
 })
 
@@ -47,10 +67,6 @@ document.querySelector('#read').addEventListener("click",()=>{
     Clean Your Face First!`);
     document.querySelector('#read').innerText = "";
 })
-
-// footer section
-import footer from "../components/footer.js"
-document.getElementById("footer").innerHTML = footer();
 
 
 //popup

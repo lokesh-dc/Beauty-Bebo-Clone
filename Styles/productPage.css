@@ -1,0 +1,100 @@
+:root{
+    --pink : #dd0285;   
+ }
+ #container,
+ #desc,
+ #recent{
+    width: 80%;
+    margin: auto;
+    margin-top: 50px;
+    border: none;
+ }
+
+
+ #container .product>div:first-child{
+     display: grid;
+     grid-template-columns: 1fr 3fr;
+     text-align: left;
+     gap: 30px;
+ }
+ #container  .product>div:first-child>div{
+     display: flex;
+     justify-content: flex-start;
+     gap: 20px;
+ }
+
+ #container  .product>div:first-child>div>:first-child{
+     text-decoration: line-through;
+     color: grey;
+ }
+ #container  .product>div:first-child>div>:last-child{
+     color: green;
+     font-weight: 500;
+ }
+ #container .product>div:first-child>:first-child{
+     grid-row-end: span 5;
+ }
+ #container  .product>div:last-child{
+     display: flex;
+     gap: 30px;
+     justify-content: center;
+     border: 1px solid pink;
+     padding: 10px;
+ }
+ #container .product button{
+     display: flex;
+     gap:10px;
+     align-items: center;
+     background-color: var(--pink);
+     border: 1px solid var(--pink);
+     border-radius:5px;
+     padding: 0.5rem 2rem;
+ }
+
+ #container  .product button:nth-child(2){
+     background-color: transparent;
+ }
+ #container  .product>div:last-child img{
+     width: 1.5rem;
+ }
+ #container  .product{
+     display: flex;
+     flex-direction: column;
+ }
+ #container  .product>div>p:first-of-type{
+     font-size: 2rem;
+ }
+ #container .product>div>div>img{
+     width: 300px;
+     border: 1px solid rgba(14, 13, 13, 0.233);
+ }
+
+
+ #desc{
+    border: 1px solid grey;
+ }
+ #desc p{
+    margin: 40px;
+    line-height: 2rem;
+ }
+ body>h2{
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin-left: 10%;
+    margin-top: 50px;
+    border-bottom: 3px solid var(--pink);
+    padding-bottom:10px ;
+    width: fit-content;
+}
+
+ #recent{
+    border: 1px solid rgba(128, 128, 128, 0.288);
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    margin-top: 0;
+}
+#recent .product{
+    border-bottom:1px solid rgba(128, 128, 128, 0.411);
+}
+

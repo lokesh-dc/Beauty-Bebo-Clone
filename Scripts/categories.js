@@ -1,4 +1,4 @@
-import getdata from "../Components/fetch.js"
+import {getdata} from "../Components/fetch.js"
 
 window.addEventListener("load",()=>{
         selection("#foundation");

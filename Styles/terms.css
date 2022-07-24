@@ -1,0 +1,17 @@
+body>div:nth-child(2){
+    width: 70%;
+    margin: auto;
+    text-align: justify;
+}
+body>div:nth-child(2)>h2{
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1.5em;
+    margin: 20px 0;
+}
+body>div:nth-child(2)>p{
+    padding: 20px;
+}
+body>div:nth-child(2)>p>b{
+    line-height: 2rem;
+}

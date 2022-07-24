@@ -102,6 +102,12 @@ let addtocart = (prod) => {
     localStorage.setItem("cartData", JSON.stringify(cartData));
     // window.location.href = "addtocart.html"
     alert("Product added to cart successfully !");
+    let sum =0;
+    for(let i=0;i<cartData.length;i++){
+        sum += cartData[i].price * 79;
+    }
+    localStorage.setItem("sum",sum);
+    document.getElementById("cart").innerText = `My cart - ₹${sum}`;
 };
 
 let wishlist = (prod) => {

@@ -57,7 +57,7 @@ let navbar = () => {
       
             <div id="total">
               <div>
-                <div id="Subtotal">Cart Subtotal :</div> <div id = "pric">₹351.00 </div>
+                <div id="Subtotal">Cart Subtotal :</div> <div id = "pric">₹0.00 </div>
               </div>
     
               <div> 

@@ -51,7 +51,7 @@
 #account:hover{
     background-color: pink ;
 }
-input,select{
+#navbar input,select{
     border: 1px solid rgba(128, 128, 128, 0.075);
     padding:  0 10px ;
     color: grey

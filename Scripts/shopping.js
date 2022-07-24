@@ -54,6 +54,10 @@ document.getElementById("navbar").innerHTML = navbar();
     // btn_remove.setAttribute("id")
      btn_remove.addEventListener("click",function(ele , index){
      data.splice(index,1);
+     let sum = localStorage.getItem("sum") || 0;
+     sum -= ele.price * 79;
+     localStorage.setItem("sum",sum);
+     display_summary();
      localStorage.setItem("cartData",JSON.stringify(data));
      display_table(data);
     })
@@ -107,3 +111,6 @@ document.getElementById("navbar").innerHTML = navbar();
   }
 
   
+  document.getElementById("switch").addEventListener("click",()=>{
+    window.location.href = "checkout.html";
+  })

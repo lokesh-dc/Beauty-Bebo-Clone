@@ -50,7 +50,3 @@ let selection = (select,brand)=>{
     getdata(query,"selection-div_data",4,brand) 
 }
 
-
-document.getElementById("brandspage").addEventListener("click",function(){
-    window.location.href = "./brands.html"
-})

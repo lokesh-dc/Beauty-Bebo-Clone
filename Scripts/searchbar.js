@@ -2,11 +2,11 @@ import navbar from "../Components/navbar.js"
 import footer from "../Components/footer.js"
 
 document.getElementById("footer").innerHTML = footer();
-
-
 document.getElementById("navbar").innerHTML = navbar();
 
-
+document.querySelector("#btn-2").addEventListener("click",()=>{
+    window.location.href = "checkout.html";
+})
 
 
 let container = document.querySelector("#container");
@@ -18,8 +18,18 @@ let data
 let searchfun = async () => {
     let query = document.querySelector("#query").value;
     getData(query, 200)
-
 }
+
+window.addEventListener("load", () => {
+    let query = localStorage.getItem("query");
+    getData(query,200)
+})
+// On enter search products
+document.querySelector("#query").addEventListener("keyup",(event)=>{
+    event.preventDefault();
+    getData(query,200)
+})
+
 
 let getData = async (query, limit) => {
     let url = `https://makeup-api.herokuapp.com/api/v1/products.json?brand=covergirl&product_type=${query}`
@@ -28,10 +38,6 @@ let getData = async (query, limit) => {
     data = await res.json()
     append(data, limit)
     console.log(data);
-
-
-
-
 }
 
 
@@ -94,12 +100,19 @@ let product = (data) => {
     // window.location.href = "product.html"
 };
 
+
 let addtocart = (prod) => {
     let cartData = JSON.parse(localStorage.getItem("cartData")) || [];
     cartData.push(prod);
     localStorage.setItem("cartData", JSON.stringify(cartData));
     // window.location.href = "addtocart.html"
-    alert("add to cart");
+    alert("Product added to cart successfully !");
+    let sum =0;
+    for(let i=0;i<cartData.length;i++){
+        sum += cartData[i].price * 79;
+    }
+    localStorage.setItem("sum",sum);
+    document.getElementById("cart").innerText = `My cart - ₹${sum}`;
 };
 
 let wishlist = (prod) => {
@@ -111,12 +124,7 @@ let wishlist = (prod) => {
 };
 document.getElementById("search").addEventListener("click", searchfun)
 
-window.addEventListener("load", () => {
-    let query = localStorage.getItem("query");
 
-
-
-})
 
 
 
@@ -154,3 +162,59 @@ filtertag.addEventListener('change', (elem) => {
 
 
 
+// popup
+let sum =0;
+let displayCart = (data) => {
+    let container = document.querySelector("#product");
+    container.innerHTML = "";
+    data.forEach(({ api_featured_image, name, price}) => {
+        let div = document.createElement("div");
+        div.setAttribute("class", "card");
+
+        let divImg = document.createElement("div");
+        let img = document.createElement("img");
+        img.src = api_featured_image;
+        divImg.append(img);
+        divImg.setAttribute("id" , "lipstick")
+
+        let divDetails = document.createElement("div");
+        let prodName = document.createElement("p");
+        prodName.innerText = name;
+
+        let prodPrice = document.createElement("p");
+        prodPrice.innerText = `₹ ${Math.floor(price*79)}`;
+
+        
+        let sumtotal = document.getElementById("pric");
+        sum=  sum+Math.floor(price*79);
+        
+        sumtotal.innerText =`₹${sum}`
+        console.log(sum);
+        divDetails.append(prodName, prodPrice);
+        div.append(divImg, divDetails);
+        container.append(div);
+
+    })
+}
+
+
+
+document.getElementById("magic").addEventListener("click",() =>{
+    let data = JSON.parse(localStorage.getItem("cartData"))
+    displayCart(data);
+  console.log(data);
+  document.getElementById("cart-popup").style.visibility="visible";
+ 
+});
+
+
+//popup
+// shopping-cart
+document.getElementById("btn-1").addEventListener("click",()=>{
+    window.location.href = "shopping.html";
+   })
+
+
+   document.getElementById("brandspage").addEventListener("click",function(){
+    window.location.href = "./brands.html"
+})

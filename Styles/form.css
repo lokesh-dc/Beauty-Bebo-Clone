@@ -23,19 +23,21 @@
     background-color: black;
     color: white;
     position: absolute;
+    margin: 50px 0;
     bottom: auto;
-    right: 0;
 }
 
 #container input,
 #container select{
     height: 30px;
-    outline: none;
     border: 1px solid rgba(0, 0, 0, 0.233);
+    padding: 5px 10px;
+    font-size: 1rem;
 }
 
 label{
     margin-top: 10px;
+    font-size: 1rem;
 }
 
 #container>form>div{

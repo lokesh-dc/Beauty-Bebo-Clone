@@ -52,14 +52,22 @@ document.getElementById("navbar").innerHTML = navbar();
     let btn_remove = document.createElement("button");
     btn_remove.innerText = "Remove";
     // btn_remove.setAttribute("id")
-     btn_remove.addEventListener("click",function(ele , index){
-     data.splice(index,1);
-     let sum = localStorage.getItem("sum") || 0;
-     sum -= ele.price * 79;
-     localStorage.setItem("sum",sum);
-     display_summary();
-     localStorage.setItem("cartData",JSON.stringify(data));
-     display_table(data);
+        btn_remove.addEventListener("click",function(ele , index){
+        data.splice(index,1);
+        let sum = localStorage.getItem("sum") || 0;
+        sum -= ele.price * 79;
+        localStorage.setItem("sum",sum);
+        display_summary();
+        localStorage.setItem("cartData",JSON.stringify(data));
+        display_table(data);
+
+        sum = 0;
+        let cartData = JSON.parse(localStorage.getItem("cartData")) || [];
+        for(let i=0;i<cartData.length;i++){
+            sum += cartData[i].price * 79;
+        }
+        localStorage.setItem("sum",sum);
+        document.getElementById("cart").innerText = `My cart - ₹${sum}`;
     })
 
     let btn_edit = document.createElement("button");
@@ -112,5 +120,10 @@ document.getElementById("navbar").innerHTML = navbar();
 
   
   document.getElementById("switch").addEventListener("click",()=>{
-    window.location.href = "checkout.html";
+    let cartData = JSON.parse(localStorage.getItem("cartData")) || [];
+    if(cartData.length===0){
+      alert("Cart is Empty");
+    }
+    else
+      window.location.href = "checkout.html";
   })

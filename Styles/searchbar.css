@@ -1,17 +1,19 @@
 #container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
     grid-template-rows: auto;
     width: 72%;
     height: auto;
     margin-bottom: 50px;
+    margin-top: 50px;
+
 }
 
 #container>div {
-    border: 1px solid red;
     text-align: center;
     padding: 10px 10px;
-    border: 0.5px solid gray;
+    border: 1px solid rgba(128, 128, 128, 0.218);
     border: 50%;
     font-family: Roboto;
 
@@ -56,9 +58,11 @@ button {
 
 
 #select {
-    margin-left: 33%;
+    margin-left: 30%;
     margin-top: 20px;
     padding: 5px 10px;
+    width: 300px;
+    border: 1px solid purple;
 }
 
 hr {

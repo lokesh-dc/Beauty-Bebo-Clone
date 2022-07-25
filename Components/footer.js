@@ -30,7 +30,7 @@ let footer = () => {
             <li><a href="#">Track your Order</a></li>
             <li><a href="#">Order Returns</a></li>
             <li><a href="#">Wishlist</a></li>
-            <li><a href="#">News & Events</a></li>
+            <li><a href="./newsevent.html">News & Events</a></li>
             <li><a href="#">FAQ</a></li>
         </ul>
     </div>

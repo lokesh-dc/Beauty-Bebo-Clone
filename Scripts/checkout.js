@@ -21,6 +21,12 @@ let cartData = JSON.parse(localStorage.getItem("cartData")) || [];
 
 window.addEventListener("load",()=>{
     displayCart(cartData);
+    let sum =0;
+    for(let i=0;i<cartData.length;i++){
+        sum += cartData[i].price * 79;
+    }
+    localStorage.setItem("sum",sum);
+    document.getElementById("cart").innerText = `My cart - ₹${sum}`;
 })
 
 

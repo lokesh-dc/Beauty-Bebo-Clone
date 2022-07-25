@@ -6,7 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>News & Events</title>
+    <link rel="stylesheet" href="./Styles/Navbar.css">
+    <link rel="stylesheet" href="./Styles/popup.css">
     <link rel="stylesheet" href="./Styles/newsevent.css">
+    <link rel="stylesheet" href="./Styles/footer.css">
 </head>
 
 <body>
@@ -67,7 +70,10 @@
             <hr>
         </div>
     </div>
-    <div id="footer"></div>
 </body>
+<script type="module">
+    import navbar from "../Components/navbar.js" 
+    document.getElementById("navbar").innerHTML = navbar();
 
+</script>
 </html>

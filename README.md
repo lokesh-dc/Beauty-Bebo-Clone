@@ -4,7 +4,11 @@
 ## Summary :
 We cloned a very well known BeutyBebo.com website wehre a user can purchase beauty products and can view profucts category wise. On landing page/Homepage you can see newly arrived & best seller products. The user needs to login / signup to access cart & widhlist section . After logging in, they can access cart,wishlist and can also access account information also can edit account details i.e. User email,password and address. After adding product to cart they can access cart section through navigation bar unser My cart div also when adding product to cart, total sum of the products in cart will be updated in navbar. After checking out at cart section, they are redirected to checkout page wherein user needs to fill shopping details and then will be redirected to payments page where card details needs to be filled upon correct card pin user will be shown payment success and will be redirected to home page but if incorrect pin is provided payment failed will be shown to user and retry payment option will be provided to user by clicking which user can retry payment.
 
-Tech used : HTML5, CSS3, JavaScript, API(logging in & product details).
+### Tech Stack : 
+  * HTML5 
+  * CSS3
+  * JavaScript 
+  * API(logging in & product details)
 
 ### Contributors :
 1. Lokesh Choudhary

@@ -8,7 +8,7 @@ We cloned a very well known BeutyBebo.com website wehre a user can purchase beau
   * HTML5 
   * CSS3
   * JavaScript 
-  * API(logging in & product details)
+  * API
 
 ### Contributors :
 1. Lokesh Choudhary

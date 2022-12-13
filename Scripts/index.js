@@ -10,10 +10,6 @@ document.getElementById("navbar").innerHTML = navbar();
 // footer section
 document.getElementById("footer").innerHTML = footer();
 
-document.getElementById('account').addEventListener("click",()=>{
-    window.location.href = "./login.html";
-})
-
 
 // on seartching redirect to search page and append products data
 let query = document.getElementById('query');

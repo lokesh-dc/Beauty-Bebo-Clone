@@ -26,10 +26,7 @@ let navbar = () => {
             </div>
             <div>
                 <img src="./Images/wishlist.png" id="wishlist" alt="Wishlist">
-                <div id="account">
-                    <img src="./Images/user.png" id alt="">
-                    <p> My Account</p>
-                </div>
+                
             </div>
         </div>
     

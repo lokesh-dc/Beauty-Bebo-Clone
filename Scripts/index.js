@@ -19,6 +19,7 @@ document.getElementById('account').addEventListener("click",()=>{
 let query = document.getElementById('query');
 // On enter search products
 document.querySelector("#query").addEventListener("keyup",(event)=>{
+    console.log("hi")
     event.preventDefault();
     if(event.key === "Enter"){
         localStorage.setItem("query",query.value);

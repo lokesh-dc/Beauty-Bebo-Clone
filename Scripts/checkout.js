@@ -6,16 +6,16 @@ document.getElementById("navbar").innerHTML = navbar();
 document.getElementById("footer").innerHTML = footer();
 
 
-document.querySelector("#next").addEventListener("click",()=>{
-    let form = document.querySelector("form");
-    let name = form.firstname.value + " "  + form.lastname.value;
-    let mobile = form.mob.value;
-    let address = `${form.street.value} ${form.city.value} (${form.zip.value} ), ${form.state.value},  ${form.country.value}`
+// document.querySelector("#next").addEventListener("click",()=>{
+//     let form = document.querySelector("form");
+//     let name = form.firstname.value + " "  + form.lastname.value;
+//     let mobile = form.mob.value;
+//     let address = `${form.street.value} ${form.city.value} (${form.zip.value} ), ${form.state.value},  ${form.country.value}`
 
-    let obj = {name,mobile,address};
-    localStorage.setItem("order",JSON.stringify(obj));
-    window.location.href = "payments.html"
-})
+//     let obj = {name,mobile,address};
+//     localStorage.setItem("order",JSON.stringify(obj));
+//     window.location.href = "payments.html"
+// })
 
 let cartData = JSON.parse(localStorage.getItem("cartData")) || [];
 
